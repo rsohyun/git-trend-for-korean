@@ -6,6 +6,8 @@
 
 🔗 **Site: https://gittrendforkorean-site.vercel.app**
 
+<img src="docs/images/01-today.png" alt="Today's ranking page">
+
 - **Official GitHub trending collection**: Automatically collects the Repositories (Today · This week · This month) and Developers (This week · This month) lists every day.
 - **Korean README summaries**: Summarizes the README of each newly appearing repository in Korean using an LLM (Gemini). A repository that has already been summarized is not processed again.
 - **Per-repository history**: Creates an Obsidian note for each repository and appends the date and appearance record every time it shows up on trending again.
@@ -37,6 +39,20 @@ GitHub's official trending data is collected automatically every day, and the RE
 - **Knowledge building**: Keep a continuous record of per-repository summaries and appearance history as a personal tech archive
 - **Efficient access**: Check the information you need the way you prefer, on the website or by email
 - **Minimal running cost**: Collection, processing, and deployment are automated with GitHub Actions and Vercel, with no server to build
+
+## 📸 Example
+
+**① Today's ranking** — Each date cell shows how many repositories and developers appeared for the first time that day; click a cell to open that day's ranking. Switch between Today · This week · This month tabs and filter by category; repositories that were not on the previous day's list are marked NEW.
+
+**② Repository detail** — Korean overview and key features, rank-change and cumulative-star charts, and the day-by-day appearance history on one page.
+
+<img src="docs/images/02-repo-detail.png" alt="Repository detail page">
+
+**③ All repositories** — Search every repository collected so far, filter by category and language, or show only repositories first seen in the last 7 days.
+
+<img src="docs/images/03-all-repos.png" alt="All repositories page">
+
+> Screenshots are from the Korean site.
 
 ## How it works
 
