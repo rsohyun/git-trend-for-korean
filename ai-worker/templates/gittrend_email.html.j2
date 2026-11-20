@@ -1,0 +1,83 @@
+{% macro href(name) %}{% if site_url %}{{ site_url }}/#/repo/{{ name }}{% else %}https://github.com/{{ name }}{% endif %}{% endmacro %}
+{% macro badge(text) %}<span style="display:inline-block;padding:2px 8px;border-radius:10px;background:#f1f3f5;color:#495057;font-size:11.5px;">{{ text }}</span>{% endmacro %}
+{% macro section(icon, title, period, color, items) %}
+<div style="margin-top:28px;">
+  <div style="border-left:4px solid {{ color }};padding:2px 0 2px 12px;margin-bottom:10px;">
+    <div style="font-size:17px;font-weight:700;">{{ icon }} {{ title }} <span style="font-size:12px;font-weight:600;color:{{ color }};margin-left:6px;">{{ items | length }}개 · 신규 {{ items | selectattr("is_new") | list | length }}개</span></div>
+    <div style="font-size:12px;color:#8a929c;margin-top:2px;">정렬: GitHub 공식 트렌딩 순 · <b style="color:{{ color }};">+★</b>는 {{ period }} 동안 늘어난 스타 수</div>
+  </div>
+  <table role="presentation" style="width:100%;border-collapse:collapse;font-size:13px;">
+    <tr style="color:#8a929c;font-size:11.5px;text-align:left;"><th style="padding:6px 8px;font-weight:600;">#</th><th style="padding:6px 8px;font-weight:600;">저장소</th><th style="padding:6px 8px;font-weight:600;">카테고리</th><th style="padding:6px 8px;font-weight:600;text-align:right;">+★</th><th style="padding:6px 8px;font-weight:600;text-align:right;">누적 ★</th></tr>
+    {% for r in items %}
+    <tr style="background:{{ '#FFF8D6' if r.is_new else '#ffffff' }};">
+      <td style="padding:10px 8px;border-top:1px solid #eef0f3;width:28px;text-align:center;font-weight:700;color:{{ color }};font-size:14px;vertical-align:top;">{{ r.rank }}</td>
+      <td style="padding:10px 8px;border-top:1px solid #eef0f3;vertical-align:top;">
+        <a href="{{ href(r.full_name) }}" style="color:#1f2328;font-weight:600;text-decoration:none;font-size:14px;">{{ r.full_name }}</a>{% if r.is_new %} <span style="display:inline-block;padding:1px 6px;border-radius:4px;background:#F5B400;color:#3d2e00;font-size:10px;font-weight:700;vertical-align:1px;">NEW</span>{% endif %}
+        <div style="margin-top:3px;color:#57606a;font-size:12.5px;line-height:1.5;">{{ r.summary or r.description or "–" }}</div>
+      </td>
+      <td style="padding:10px 8px;border-top:1px solid #eef0f3;vertical-align:top;white-space:nowrap;">{{ badge(r.categories[0] if r.categories else "–") }}</td>
+      <td style="padding:10px 8px;border-top:1px solid #eef0f3;vertical-align:top;text-align:right;white-space:nowrap;font-weight:700;color:{{ color }};">{% if r.gain is not none %}+{{ r.gain | num }}{% else %}–{% endif %}</td>
+      <td style="padding:10px 8px;border-top:1px solid #eef0f3;vertical-align:top;text-align:right;white-space:nowrap;color:#57606a;">{{ r.stars | num }}</td>
+    </tr>
+    {% endfor %}
+  </table>
+</div>
+{% endmacro %}
+{% macro stat(label, value, sub, color) %}
+<td style="width:33%;padding:12px 14px;background:#f8f9fb;border-radius:8px;vertical-align:top;">
+  <div style="font-size:11px;color:#8a929c;font-weight:600;">{{ label }}</div>
+  <div style="font-size:14px;font-weight:700;margin-top:4px;word-break:break-all;">{{ value }}</div>
+  <div style="font-size:12px;color:{{ color }};font-weight:600;margin-top:2px;">{{ sub }}</div>
+</td>
+{% endmacro %}
+<!doctype html>
+<html lang="ko">
+<body style="margin:0;padding:24px 12px;background:#f1f3f5;font-family:'Malgun Gothic','Apple SD Gothic Neo',Arial,sans-serif;color:#1f2328;">
+<div style="max-width:760px;margin:0 auto;background:#ffffff;border-radius:12px;padding:28px 28px 20px;">
+  <div style="font-size:12px;color:#8a929c;font-weight:600;letter-spacing:.3px;">GITHUB 트렌딩</div>
+  <div style="font-size:22px;font-weight:800;margin-top:4px;">{{ today.month }}월 {{ today.day }}일 ({{ weekday }}){% if site_url %} <a href="{{ site_url }}/#/day/{{ today }}" style="font-size:13px;font-weight:600;color:#1c7ed6;margin-left:8px;">웹에서 보기</a>{% endif %}</div>
+  <div style="font-size:12px;color:#57606a;margin-top:6px;">출처: <a href="https://github.com/trending" style="color:#57606a;">GitHub Trending</a> This week·Today · 수집 {{ today }} {{ collected_at }} (KST)</div>
+  <div style="font-size:12px;color:#57606a;margin-top:4px;"><span style="display:inline-block;width:12px;height:12px;background:#FFF8D6;border:1px solid #F5B400;border-radius:3px;vertical-align:-2px;"></span> 노란색 줄 + <b>NEW</b> = 전날 같은 목록에 없던 저장소</div>
+
+  <table role="presentation" style="width:100%;border-collapse:separate;border-spacing:8px 0;margin:16px -8px 0;"><tr>
+    {% if week_list %}{{ stat("📈 WEEK 1위", week_list[0].full_name, "+" ~ (week_list[0].gain | num) ~ " ★ / 7일", "#1c7ed6") }}{% endif %}
+    {% if today_list %}{{ stat("🔥 TODAY 1위", today_list[0].full_name, "+" ~ (today_list[0].gain | num) ~ " ★ / 24시간", "#e8590c") }}{% endif %}
+    {{ stat("🆕 새로 등장", new_count ~ "개", "노란색 줄로 표시", "#b08800") }}
+  </tr></table>
+
+  {{ section("📈", "This Week", "7일", "#1c7ed6", week_list) }}
+  {{ section("🔥", "Today", "24시간", "#e8590c", today_list) }}
+
+  <div style="margin-top:32px;">
+    <div style="border-left:4px solid #F5B400;padding:2px 0 2px 12px;margin-bottom:6px;">
+      <div style="font-size:17px;font-weight:700;">🆕 새로 정리한 저장소</div>
+      <div style="font-size:12px;color:#8a929c;margin-top:2px;">처음 본 저장소의 소개 문구와 README를 읽고 정리했습니다</div>
+    </div>
+    {% for r in repos if r.new_note %}
+    <div style="padding:14px 0;border-top:1px solid #eef0f3;">
+      <a href="{{ href(r.full_name) }}" style="font-weight:700;color:#1f2328;text-decoration:none;font-size:14px;">{{ r.full_name }}</a>
+      {% if r.detail %}
+      {{ badge(r.detail.categories[0]) }}
+      <div style="font-size:13.5px;margin-top:6px;font-weight:600;">{{ r.detail.one_liner }}</div>
+      <div style="font-size:13px;margin-top:6px;line-height:1.65;color:#3d444d;">{{ r.detail.overview }}</div>
+      <ul style="font-size:12.5px;margin:6px 0 0;padding-left:18px;line-height:1.7;color:#3d444d;">
+        {% for f in r.detail.features %}<li>{{ f }}</li>{% endfor %}
+      </ul>
+      {% if r.detail.cautions %}<div style="font-size:12px;color:#8a5a00;margin-top:4px;">주의: {{ r.detail.cautions | join(" / ") }}</div>{% endif %}
+      {% else %}
+      <div style="font-size:13px;margin-top:6px;">{{ r.description or "설명 없음" }} <span style="color:#8a929c;">(요약 실패, 다음 실행에서 다시 시도)</span></div>
+      {% endif %}
+    </div>
+    {% else %}
+    <p style="font-size:13px;color:#57606a;">오늘은 새로 정리한 저장소가 없습니다.</p>
+    {% endfor %}
+  </div>
+
+  {% if warnings %}
+  <div style="margin-top:24px;font-size:14px;font-weight:700;color:#8a5a00;">경고</div>
+  <ul style="font-size:13px;padding-left:20px;margin:6px 0 0;">{% for w in warnings %}<li>{{ w }}</li>{% endfor %}</ul>
+  {% endif %}
+  <div style="margin-top:28px;padding-top:14px;border-top:1px solid #eef0f3;font-size:11px;color:#a0a7b0;">순위 출처: GitHub Trending · 매일 08:00 이후 자동 발송 · 노트: vault/30-Trends/Repos</div>
+</div>
+</body>
+</html>

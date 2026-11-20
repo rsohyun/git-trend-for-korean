@@ -1,0 +1,465 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Github 트렌딩</title>
+<meta name="robots" content="noindex, nofollow">
+<meta name="description" content="GitHub 공식 트렌딩 저장소와 개발자를 매일 한국어 요약과 함께 정리합니다.">
+<meta property="og:title" content="Github 트렌딩">
+<meta property="og:description" content="매일 오후 2시, GitHub 공식 트렌딩 저장소와 개발자를 한국어 요약과 함께 정리합니다.">
+<meta property="og:type" content="website">
+{% if site_url %}<meta property="og:url" content="{{ site_url }}/">{% endif %}
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<style>
+:root {
+  --bg: #f4f6f8; --surface: #ffffff; --ink: #1a1d21; --muted: #66707a; --line: #e2e6ea;
+  --today: #e8590c; --today-soft: #fde8dc; --week: #1c7ed6; --week-soft: #dcebfa; --month: #7048e8; --month-soft: #e9e3fc;
+  --new: #fff4c2; --new-mark: #d9a100; --chip: #eef1f4; --focus: #1c7ed6;
+}
+:root[data-theme="dark"] {
+  --bg: #15181c; --surface: #1d2126; --ink: #e8eaed; --muted: #98a1ab; --line: #2e343b;
+  --today: #ff8a4c; --today-soft: #3a2519; --week: #5aa9f0; --week-soft: #1a2b3d; --month: #9775fa; --month-soft: #2a2340;
+  --new: #3a3218; --new-mark: #f0c541; --chip: #2a2f35; --focus: #5aa9f0;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #15181c; --surface: #1d2126; --ink: #e8eaed; --muted: #98a1ab; --line: #2e343b;
+    --today: #ff8a4c; --today-soft: #3a2519; --week: #5aa9f0; --week-soft: #1a2b3d; --month: #9775fa; --month-soft: #2a2340;
+    --new: #3a3218; --new-mark: #f0c541; --chip: #2a2f35; --focus: #5aa9f0;
+  }
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--ink); font: 15px/1.6 "Pretendard Variable", Pretendard, system-ui, sans-serif; font-feature-settings: "tnum"; }
+a { color: inherit; }
+:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; border-radius: 4px; }
+.wrap { max-width: 1040px; margin: 0 auto; padding: 0 16px; }
+
+header.top { position: sticky; top: 0; z-index: 5; background: color-mix(in srgb, var(--bg) 88%, transparent); backdrop-filter: blur(8px); border-bottom: 1px solid var(--line); }
+header.top .wrap { display: flex; align-items: center; gap: 20px; height: 56px; }
+.brand { font-weight: 800; text-decoration: none; letter-spacing: -.02em; display: flex; align-items: center; gap: 8px; }
+.brand svg { flex: none; }
+nav.main { display: flex; gap: 4px; margin-left: auto; }
+nav.main a, .icon-btn { text-decoration: none; padding: 6px 12px; border-radius: 8px; color: var(--muted); font-weight: 600; font-size: 14px; background: none; border: 0; cursor: pointer; font-family: inherit; }
+nav.main a[aria-current="page"] { color: var(--ink); background: var(--chip); }
+.icon-btn { padding: 6px 8px; }
+
+main { padding: 28px 0 64px; }
+
+/* 날짜 머리 */
+.dayhead { display: flex; align-items: flex-end; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+.dayhead h1 { margin: 0; font-size: clamp(30px, 5vw, 44px); line-height: 1.1; letter-spacing: -.035em; font-weight: 800; }
+.dayhead h1 small { font-size: .45em; color: var(--muted); font-weight: 600; letter-spacing: 0; margin-left: 8px; }
+.daynav { display: flex; gap: 6px; }
+.daynav a, .daynav span { display: inline-flex; align-items: center; justify-content: center; min-width: 40px; height: 36px; padding: 0 12px; border-radius: 8px; border: 1px solid var(--line); background: var(--surface); text-decoration: none; font-weight: 600; font-size: 14px; }
+.daynav span { color: var(--muted); opacity: .45; }
+.source { margin: 10px 0 0; color: var(--muted); font-size: 13px; }
+.source b { color: var(--ink); font-weight: 600; }
+.insight { margin: 22px 0 6px; background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 16px 18px; }
+.insight .top { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; flex-wrap: wrap; }
+.insight h2 { margin: 0; font-size: 13px; color: var(--week); }
+.insight .sum { font-size: 12.5px; color: var(--muted); }
+.insight .sum b { color: var(--ink); }
+.insight .hl { font-size: clamp(17px, 2.4vw, 20px); font-weight: 800; letter-spacing: -.02em; line-height: 1.4; margin: 6px 0 12px; }
+.insight .cards { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; }
+.insight .card { border: 1px solid var(--line); border-radius: 10px; padding: 10px 12px; }
+.insight .card h3 { margin: 0; font-size: 14px; }
+.insight .card h3 span { font-weight: 500; color: var(--muted); font-size: 12px; margin-left: 4px; }
+.insight .card p { margin: 4px 0 8px; font-size: 13px; color: var(--muted); line-height: 1.5; }
+.insight .card .chips { margin: 0; gap: 4px; }
+.insight .card .chip { font-size: 12px; padding: 2px 8px; }
+.insight details { margin-top: 10px; }
+.insight summary { cursor: pointer; color: var(--week); font-size: 13.5px; font-weight: 600; }
+.insight details .when-open, .insight details[open] .when-closed { display: none; }
+.insight details[open] .when-open { display: inline; }
+.insight details p { margin: 8px 0 0; font-size: 14px; }
+.insight details p b { font-weight: 700; }
+.today-insight { margin: 0 0 12px; padding: 10px 14px; border-left: 4px solid var(--today); background: var(--surface); font-size: 14px; }
+@media (max-width: 760px) { .insight .cards { grid-template-columns: 1fr; } }
+.stale { margin: 12px 0 0; padding: 10px 12px; border-left: 4px solid var(--today); background: var(--today-soft); border-radius: 6px; font-size: 13.5px; }
+
+/* 날짜 띠: 하루 = 한 칸, 진하기 = 신규 수 */
+.strip { margin: 22px 0 6px; display: flex; gap: 4px; overflow-x: auto; padding-bottom: 6px; }
+.strip a { flex: none; width: 46px; text-decoration: none; text-align: center; font-size: 11px; color: var(--muted); }
+.strip a i { display: block; height: 34px; border-radius: 6px; margin-bottom: 4px; background: var(--chip); position: relative; }
+.strip a[aria-current="date"] { color: var(--ink); font-weight: 700; }
+.strip a[aria-current="date"] i { box-shadow: 0 0 0 2px var(--ink); }
+.strip a i b { position: absolute; inset: 0; display: grid; place-items: center; font-style: normal; font-size: 12px; color: var(--ink); font-weight: 700; }
+.strip-legend { font-size: 12px; color: var(--muted); margin: 0 0 22px; }
+
+/* 탭 + 칩 */
+.tabs { display: flex; gap: 0; border-bottom: 1px solid var(--line); margin-bottom: 14px; }
+.tabs button { font: inherit; font-weight: 700; font-size: 16px; background: none; border: 0; padding: 10px 18px 12px; cursor: pointer; color: var(--muted); border-bottom: 3px solid transparent; margin-bottom: -1px; }
+.tabs button[aria-selected="true"][data-k="daily"] { color: var(--today); border-color: var(--today); }
+.tabs button[aria-selected="true"][data-k="weekly"] { color: var(--week); border-color: var(--week); }
+.tabs button[aria-selected="true"][data-k="monthly"] { color: var(--month); border-color: var(--month); }
+.kinds { display: flex; gap: 6px; margin: 0 0 12px; }
+.kinds button { font: inherit; font-weight: 700; font-size: 14px; padding: 6px 14px; border-radius: 999px; border: 1px solid var(--line); background: var(--surface); color: var(--muted); cursor: pointer; }
+.kinds button[aria-selected="true"] { background: var(--ink); color: var(--surface); border-color: var(--ink); }
+.tabs button span { font-size: 12px; font-weight: 600; margin-left: 6px; opacity: .8; }
+.sortnote { font-size: 12.5px; color: var(--muted); margin: 0 0 12px; }
+.chips { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 14px; }
+.chip { font: inherit; font-size: 12.5px; padding: 3px 10px; border-radius: 999px; background: var(--chip); color: var(--ink); border: 1px solid transparent; cursor: pointer; text-decoration: none; white-space: nowrap; }
+.chip[aria-pressed="true"] { background: var(--ink); color: var(--surface); }
+.chip.new { background: var(--new-mark); color: #2b2100; font-weight: 700; font-size: 10.5px; padding: 1px 6px; border-radius: 4px; cursor: default; }
+
+/* 순위 목록 */
+.board { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; overflow: hidden; }
+.row { display: grid; grid-template-columns: 44px 1fr 200px 90px; gap: 14px; align-items: center; padding: 14px 18px; border-top: 1px solid var(--line); text-decoration: none; }
+.row:first-child { border-top: 0; }
+.row:hover { background: color-mix(in srgb, var(--chip) 55%, transparent); }
+.row.is-new { background: var(--new); }
+.row .rk { font-size: 22px; font-weight: 800; text-align: center; color: var(--k); letter-spacing: -.03em; }
+.row .nm { font-weight: 700; font-size: 15px; word-break: break-all; }
+.row .nm .owner { color: var(--muted); font-weight: 500; }
+.row .sm { color: var(--muted); font-size: 13.5px; margin-top: 2px; }
+.row .meta { margin-top: 6px; display: flex; gap: 6px; flex-wrap: wrap; align-items: center; font-size: 12px; color: var(--muted); }
+.vel { font-size: 12px; color: var(--muted); }
+.vel .bar { height: 8px; border-radius: 4px; background: var(--k-soft); overflow: hidden; margin-bottom: 4px; }
+.vel .bar i { display: block; height: 100%; background: var(--k); border-radius: 4px; }
+.vel b { color: var(--k); font-size: 14px; }
+.row .tot { text-align: right; font-size: 13px; color: var(--muted); }
+.row .tot b { display: block; color: var(--ink); font-size: 14px; }
+.k-daily { --k: var(--today); --k-soft: var(--today-soft); }
+.k-weekly { --k: var(--week); --k-soft: var(--week-soft); }
+.k-monthly { --k: var(--month); --k-soft: var(--month-soft); }
+.devs .row { grid-template-columns: 44px 36px 1fr; }
+.devs .row .av { width: 32px; height: 32px; border-radius: 50%; background: var(--chip); }
+.devs .row a { text-decoration: none; }
+.devs .row a:hover { text-decoration: underline; }
+.empty { padding: 40px 18px; text-align: center; color: var(--muted); }
+
+/* 상세 */
+.back { display: inline-block; margin-bottom: 18px; color: var(--muted); text-decoration: none; font-size: 14px; }
+.repo-h { display: flex; justify-content: space-between; gap: 16px; align-items: flex-start; flex-wrap: wrap; }
+.repo-h h1 { margin: 0; font-size: clamp(24px, 4vw, 34px); letter-spacing: -.03em; line-height: 1.2; word-break: break-all; }
+.repo-h h1 .owner { color: var(--muted); font-weight: 500; }
+.lede { font-size: 18px; margin: 12px 0 0; max-width: 62ch; }
+.btn { display: inline-flex; align-items: center; gap: 6px; padding: 9px 14px; border-radius: 8px; background: var(--ink); color: var(--surface); text-decoration: none; font-weight: 700; font-size: 14px; white-space: nowrap; }
+.facts { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--line); border: 1px solid var(--line); border-radius: 12px; overflow: hidden; margin: 24px 0; }
+.facts div { background: var(--surface); padding: 14px 16px; }
+.facts dt { font-size: 12px; color: var(--muted); }
+.facts dd { margin: 2px 0 0; font-weight: 700; font-size: 17px; }
+.cols { display: grid; grid-template-columns: 1.2fr 1fr; gap: 28px; }
+.cols h2 { font-size: 16px; margin: 0 0 8px; }
+.cols p { margin: 0 0 20px; max-width: 62ch; }
+.cols ul { margin: 0 0 20px; padding-left: 18px; }
+.cols li { margin-bottom: 6px; }
+.cols li b { font-weight: 700; }
+.panel { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 16px; margin-bottom: 16px; }
+.panel h2 { display: flex; justify-content: space-between; align-items: baseline; }
+.panel h2 small { font-weight: 500; color: var(--muted); font-size: 12px; }
+.legend { display: flex; gap: 12px; font-size: 12px; color: var(--muted); margin-top: 6px; }
+.legend i { display: inline-block; width: 10px; height: 3px; border-radius: 2px; vertical-align: middle; margin-right: 4px; }
+svg.chart { width: 100%; height: auto; display: block; }
+svg.chart text { font-size: 10px; fill: var(--muted); font-family: inherit; }
+table.hist { width: 100%; border-collapse: collapse; font-size: 13px; }
+table.hist th, table.hist td { padding: 6px 4px; border-top: 1px solid var(--line); text-align: right; }
+table.hist th:first-child, table.hist td:first-child { text-align: left; }
+table.hist th { color: var(--muted); font-weight: 600; border-top: 0; }
+
+/* 전체 목록 */
+.filters { display: grid; grid-template-columns: 1fr 160px 160px 160px; gap: 8px; margin: 18px 0 10px; }
+.filters input, .filters select { font: inherit; font-size: 14px; padding: 9px 12px; border-radius: 8px; border: 1px solid var(--line); background: var(--surface); color: var(--ink); width: 100%; }
+.filters-2 { display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; font-size: 13px; color: var(--muted); }
+.filters-2 label { display: flex; gap: 6px; align-items: center; cursor: pointer; color: var(--ink); }
+.list .row { grid-template-columns: 1fr 120px 110px 90px; }
+.list .row .num { text-align: right; font-size: 13px; color: var(--muted); }
+.list .row .num b { display: block; color: var(--ink); font-size: 14px; }
+h1.page { margin: 0; font-size: clamp(28px, 4.5vw, 40px); letter-spacing: -.035em; }
+
+footer { border-top: 1px solid var(--line); padding: 20px 0 40px; font-size: 12.5px; color: var(--muted); }
+
+@media (max-width: 760px) {
+  nav.main a { padding: 6px 8px; }
+  .brand span { display: none; }
+  .row, .list .row { grid-template-columns: 34px 1fr; gap: 10px; padding: 12px 14px; }
+  .devs .row { grid-template-columns: 34px 32px 1fr; }
+  .tabs button { padding: 8px 10px 10px; font-size: 15px; white-space: nowrap; }
+  .list .row { grid-template-columns: 1fr; }
+  .row .vel, .row .tot, .list .row .num { grid-column: 2; }
+  .list .row .num { grid-column: 1; text-align: left; display: inline; }
+  .row .tot { text-align: left; }
+  .row .tot b { display: inline; margin-right: 4px; }
+  .facts { grid-template-columns: repeat(2, 1fr); }
+  .cols { grid-template-columns: 1fr; }
+  .filters { grid-template-columns: 1fr 1fr; }
+  .filters input { grid-column: 1 / -1; }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .vel .bar i { animation: grow .5s ease-out both; transform-origin: left; }
+  @keyframes grow { from { transform: scaleX(0); } }
+}
+</style>
+</head>
+<body>
+<header class="top"><div class="wrap">
+  <a class="brand" href="#/"><svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path fill="var(--today)" d="M12 2l2.9 6.6 7.1.6-5.4 4.7 1.6 7L12 17.3 5.8 20.9l1.6-7L2 9.2l7.1-.6z"/></svg><span>Github 트렌딩</span></a>
+  <nav class="main" aria-label="주요 메뉴">
+    <a href="#/" data-nav="day">오늘</a>
+    <a href="#/repos" data-nav="repos">전체 저장소</a>
+    <button class="icon-btn" id="theme" type="button" aria-label="화면 테마 바꾸기">◐</button>
+  </nav>
+</div></header>
+<main class="wrap" id="app"></main>
+<footer><div class="wrap">순위 출처: <a href="https://github.com/trending">GitHub Trending</a>. 저장소 요약은 소개 문구와 README를 읽고 AI가 작성했습니다. 매일 오전 8시(KST) 이후에 갱신됩니다.</div></footer>
+
+<script id="data" type="application/json">{{ data_json | safe }}</script>
+<script>
+{% raw %}
+const D = JSON.parse(document.getElementById("data").textContent);
+const app = document.getElementById("app");
+const byName = Object.fromEntries(D.repos.map(r => [r.name, r]));
+const days = Object.keys(D.days).sort();
+const latest = days[days.length - 1];
+const state = { kind: "repos", tab: "weekly", cat: null, q: "", fcat: "", flang: "", sort: "recent", recent: false };
+
+const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+const num = n => n == null ? "–" : n.toLocaleString("ko-KR");
+const wk = "일월화수목금토";
+const fmtDate = (d, withYear) => { const [y, m, dd] = d.split("-").map(Number); const w = wk[new Date(y, m - 1, dd).getDay()]; return `${withYear ? y + "년 " : ""}${m}월 ${dd}일 (${w})`; };
+const short = d => { const [, m, dd] = d.split("-").map(Number); return `${m}/${dd}`; };
+const nameHtml = n => { const [o, r] = n.split("/"); return `<span class="owner">${esc(o)}/</span>${esc(r)}`; };
+const repoHref = n => `#/repo/${n}`;
+
+const PERIODS = { repos: ["daily", "weekly", "monthly"], devs: ["weekly", "monthly"] };
+const LABEL = { daily: "Today", weekly: "This week", monthly: "This month" };
+const UNIT = { daily: "24시간", weekly: "7일", monthly: "30일" };
+const link = n => byName[n] ? { href: repoHref(n), ext: "" } : { href: `https://github.com/${n}`, ext: ' target="_blank" rel="noopener"' };
+
+// 날짜별 목록은 스냅샷이 원본, 요약·기록은 노트에서 채운다. 노트가 없으면(요약 실패) GitHub로 연결
+function dayLists(date) {
+  const out = {};
+  for (const k of PERIODS.repos) out[k] = (D.days[date].repos[k] || []).map(e => {
+    const note = byName[e.name];
+    const r = note || { name: e.name, summary: e.summary, categories: e.categories || [], language: null };
+    return { r, rank: e.rank, gain: e.gain, stars: e.stars, isNew: e.is_new, language: r.language || e.language,
+      href: note ? repoHref(e.name) : `https://github.com/${e.name}`, external: !note,
+      nth: note ? note.history.filter(x => x.date <= date).length : 1 };
+  });
+  return out;
+}
+const newCount = date => new Set([
+  ...PERIODS.repos.flatMap(k => (D.days[date].repos[k] || []).filter(e => e.is_new).map(e => e.name)),
+  ...PERIODS.devs.flatMap(k => (D.days[date].developers[k] || []).filter(e => e.is_new).map(e => "@" + e.login)),
+]).size;
+const when = iso => iso ? iso.slice(0, 16).replace("T", " ") : "기록 없음";
+
+function insightHtml(ins) {
+  if (!ins || !ins.groups) return "";
+  const s = ins.stats, text = Object.fromEntries((ins.categories || []).map(c => [c.name, c]));
+  const chip = n => `<a class="chip" href="${byName[n] ? repoHref(n) : `https://github.com/${esc(n)}`}"${byName[n] ? "" : ' target="_blank" rel="noopener"'}>${esc(n.split("/")[1])}</a>`;
+  return `<section class="insight" aria-label="최근 7일 트렌드">
+    <div class="top"><h2>최근 7일 트렌드</h2>
+      <span class="sum">상위 ${s.count}개 <b>+${num(s.total_gain)}★</b> · 1위 ${esc(s.leader.name)} <b>+${num(s.leader.gain)}★</b></span></div>
+    ${ins.headline ? `<p class="hl">${esc(ins.headline)}</p>` : '<div style="height:10px"></div>'}
+    <div class="cards">${ins.groups.map(g => `<div class="card">
+      <h3>${esc(g.name)}<span>${g.repos.length}개</span></h3>
+      ${text[g.name] ? `<p>${esc(text[g.name].summary)}</p>` : ""}
+      <div class="chips">${g.repos.slice(0, 3).map(chip).join("")}</div></div>`).join("")}</div>
+    ${ins.categories ? `<details>
+      <summary><span class="when-closed">분야별 설명 펼치기</span><span class="when-open">분야별 설명 접기</span></summary>
+      ${ins.categories.map(c => `<p><b>${esc(c.name)}</b> · ${esc(c.detail)}</p>`).join("")}</details>` : ""}
+  </section>`;
+}
+
+function devRow(d) {
+  const repo = d.repo ? link(d.repo) : null;
+  const summary = d.repo ? (byName[d.repo]?.summary || d.repo_summary) : "";
+  return `
+      <div class="row ${d.is_new ? "is-new" : ""}">
+        <div class="rk">${d.rank}</div>
+        <img class="av" src="${esc(d.avatar)}" alt="" width="32" height="32" loading="lazy">
+        <div>
+          <div class="nm"><a href="https://github.com/${esc(d.login)}" target="_blank" rel="noopener">${esc(d.name)}</a> <span class="owner">@${esc(d.login)}</span> ${d.is_new ? '<span class="chip new">NEW</span>' : ""}</div>
+          ${repo ? `<div class="sm"><a href="${esc(repo.href)}"${repo.ext}>${nameHtml(d.repo)}</a> · ${esc(summary)}</div>` : ""}
+        </div>
+      </div>`;
+}
+
+function renderDay(date) {
+  if (!days.length) { app.innerHTML = `<div class="empty">아직 수집된 데이터가 없습니다.</div>`; return; }
+  if (!days.includes(date)) date = latest;
+  const i = days.indexOf(date), L = dayLists(date), devs = D.days[date].developers;
+  const periods = PERIODS[state.kind];
+  if (!periods.includes(state.tab)) state.tab = "weekly";
+  const isRepos = state.kind === "repos";
+  const items = isRepos ? L[state.tab] : [];
+  const cats = [...new Set(items.flatMap(x => x.r.categories.slice(0, 1)))];
+  if (state.cat && !cats.includes(state.cat)) state.cat = null;
+  const shown = state.cat ? items.filter(x => x.r.categories[0] === state.cat) : items;
+  const maxGain = Math.max(1, ...items.map(x => x.gain || 0));
+  const maxNew = Math.max(1, ...days.map(newCount));
+  const unit = UNIT[state.tab];
+  const nav = (d, label, rel) => d ? `<a href="#/day/${d}" aria-label="${rel}">${label}</a>` : `<span aria-hidden="true">${label}</span>`;
+  const count = k => (isRepos ? L[k] : devs[k] || []).length;
+  app.innerHTML = `
+    <div class="dayhead">
+      <h1>${fmtDate(date)}${date === latest ? "<small>오늘의 순위</small>" : ""}</h1>
+      <div class="daynav">${nav(days[i - 1], "◀ 이전 날", "이전 날")}${nav(days[i + 1], "다음 날 ▶", "다음 날")}${date !== latest ? `<a href="#/">오늘로</a>` : ""}</div>
+    </div>
+    <p class="source">GitHub 트렌딩 수집 ${esc(when(D.days[date].collected_at))} (KST)</p>
+    ${insightHtml(D.days[date].insight)}
+    <nav class="strip" aria-label="날짜 선택">${days.map(d => {
+      const n = newCount(d), a = n ? .15 + .85 * n / maxNew : 0;
+      return `<a href="#/day/${d}" ${d === date ? 'aria-current="date"' : ""} title="${fmtDate(d, true)} 신규 ${n}개"><i style="background:${n ? `color-mix(in srgb, var(--new-mark) ${Math.round(a * 100)}%, var(--chip))` : ""}"><b>${n || ""}</b></i>${short(d)}</a>`;
+    }).join("")}</nav>
+    <p class="strip-legend">칸의 숫자와 진하기 = 그날 처음 등장한 저장소·개발자 수</p>
+    <div class="kinds" role="tablist" aria-label="종류">
+      <button role="tab" data-kind="repos" aria-selected="${isRepos}">Repositories</button>
+      <button role="tab" data-kind="devs" aria-selected="${!isRepos}">Developers</button>
+    </div>
+    <div class="tabs" role="tablist" aria-label="기간">${periods.map(k =>
+      `<button role="tab" data-k="${k}" aria-selected="${state.tab === k}">${LABEL[k]}<span>${count(k)}</span></button>`).join("")}
+    </div>
+    <p class="sortnote">${isRepos
+      ? "GitHub 공식 트렌딩 순서입니다. 막대는 해당 기간에 늘어난 스타 수입니다. 노란 줄은 전날 같은 목록에 없던 저장소입니다."
+      : "GitHub 공식 트렌딩 개발자 순서입니다. 노란 줄은 전날 같은 목록에 없던 개발자입니다."}</p>
+    ${isRepos ? `<div class="chips" aria-label="카테고리로 거르기">
+      <button class="chip" data-cat="" aria-pressed="${!state.cat}">전체</button>
+      ${cats.map(c => `<button class="chip" data-cat="${esc(c)}" aria-pressed="${state.cat === c}">${esc(c)}</button>`).join("")}
+    </div>` : ""}
+    ${isRepos ? `<div class="board k-${state.tab}" role="tabpanel">${shown.length ? shown.map(x => `
+      <a class="row ${x.isNew ? "is-new" : ""}" href="${esc(x.href)}"${x.external ? ' target="_blank" rel="noopener"' : ""}>
+        <div class="rk">${x.rank}</div>
+        <div>
+          <div class="nm">${nameHtml(x.r.name)} ${x.isNew ? '<span class="chip new">NEW</span>' : ""}</div>
+          <div class="sm">${esc(x.r.summary)}</div>
+          <div class="meta">${x.r.categories[0] ? `<span class="chip">${esc(x.r.categories[0])}</span>` : ""}${x.language ? `<span>${esc(x.language)}</span>` : ""}${x.nth > 1 ? `<span>${x.nth}일째 등장</span>` : ""}</div>
+        </div>
+        <div class="vel"><div class="bar"><i style="width:${Math.round(100 * (x.gain || 0) / maxGain)}%"></i></div><b>+${num(x.gain)}</b> ★ / ${unit}</div>
+        <div class="tot"><b>${num(x.stars)}</b>누적 ★</div>
+      </a>`).join("") : `<div class="empty">이 카테고리의 저장소가 없습니다. 전체를 눌러 모두 보세요.</div>`}
+    </div>` : `<div class="board devs k-${state.tab}" role="tabpanel">${(devs[state.tab] || []).map(devRow).join("") || '<div class="empty">개발자 목록이 없습니다.</div>'}</div>`}`;
+  app.querySelectorAll(".kinds button").forEach(b => b.onclick = () => { state.kind = b.dataset.kind; state.cat = null; renderDay(date); });
+  app.querySelectorAll(".tabs button").forEach(b => b.onclick = () => { state.tab = b.dataset.k; state.cat = null; renderDay(date); });
+  app.querySelectorAll(".chips button").forEach(b => b.onclick = () => { state.cat = b.dataset.cat || null; renderDay(date); });
+  app.querySelector(".strip [aria-current]")?.scrollIntoView({ inline: "center", block: "nearest" });
+}
+
+function chart(r, kind) {
+  const W = 520, H = 160, P = { l: 30, r: 10, t: 12, b: 22 };
+  const span = days.slice(days.indexOf(r.first_seen) >= 0 ? days.indexOf(r.first_seen) : 0);
+  const xs = d => P.l + (span.length < 2 ? (W - P.l - P.r) / 2 : (W - P.l - P.r) * span.indexOf(d) / (span.length - 1));
+  const H_ = r.history.filter(h => span.includes(h.date));
+  let lines = "", yLabels = "";
+  if (kind === "rank") {
+    const ys = v => P.t + (H - P.t - P.b) * (v - 1) / 24;
+    [1, 5, 10, 15, 20, 25].forEach(v => yLabels += `<text x="${P.l - 6}" y="${ys(v) + 3}" text-anchor="end">${v}위</text><line x1="${P.l}" x2="${W - P.r}" y1="${ys(v)}" y2="${ys(v)}" stroke="var(--line)"/>`);
+    for (const [k, c] of [["daily", "var(--today)"], ["weekly", "var(--week)"], ["monthly", "var(--month)"]]) {
+      const pts = H_.filter(h => h[k]).map(h => [xs(h.date), ys(Math.min(h[k].rank, 25))]);
+      if (pts.length > 1) lines += `<polyline fill="none" stroke="${c}" stroke-width="2.5" stroke-linejoin="round" points="${pts.join(" ")}"/>`;
+      lines += pts.map(p => `<circle cx="${p[0]}" cy="${p[1]}" r="3.5" fill="${c}"/>`).join("");
+    }
+  } else {
+    const vals = H_.map(h => h.stars).filter(v => v != null);
+    if (!vals.length) return "";
+    const lo = Math.min(...vals) * .97, hi = Math.max(...vals) * 1.01;
+    const ys = v => P.t + (H - P.t - P.b) * (1 - (v - lo) / (hi - lo || 1));
+    [lo, hi].forEach(v => yLabels += `<text x="${P.l - 6}" y="${ys(v) + 3}" text-anchor="end">${v >= 1000 ? Math.round(v / 1000) + "k" : Math.round(v)}</text>`);
+    const pts = H_.filter(h => h.stars != null).map(h => [xs(h.date), ys(h.stars)]);
+    lines = `<polyline fill="none" stroke="var(--ink)" stroke-width="2" points="${pts.join(" ")}"/>` + pts.map(p => `<circle cx="${p[0]}" cy="${p[1]}" r="3" fill="var(--ink)"/>`).join("");
+  }
+  const step = Math.ceil(span.length / 7);
+  const xl = span.map((d, i) => i % step === 0 || i === span.length - 1 ? `<text x="${xs(d)}" y="${H - 6}" text-anchor="middle">${short(d)}</text>` : "").join("");
+  return `<svg class="chart" viewBox="0 0 ${W} ${H}" role="img" aria-label="${kind === "rank" ? "날짜별 순위" : "날짜별 누적 스타"}">${yLabels}${xl}${lines}</svg>`;
+}
+
+function renderRepo(name) {
+  const r = byName[name];
+  if (!r) { app.innerHTML = `<a class="back" href="#/repos">◀ 전체 저장소</a><div class="empty">${esc(name)} 저장소를 찾지 못했습니다. 전체 저장소에서 검색해 보세요.</div>`; return; }
+  const feat = f => { const m = f.match(/^([^:]{1,30}):\s*(.*)$/); return m ? `<b>${esc(m[1])}</b>: ${esc(m[2])}` : esc(f); };
+  app.innerHTML = `
+    <a class="back" href="javascript:history.back()">◀ 뒤로</a>
+    <div class="repo-h">
+      <div><h1>${nameHtml(r.name)}</h1><p class="lede">${esc(r.summary)}</p>
+        <div class="chips" style="margin-top:12px">${r.categories.map(c => `<a class="chip" href="#/repos?cat=${encodeURIComponent(c)}">${esc(c)}</a>`).join("")}${r.language ? `<span class="chip">${esc(r.language)}</span>` : ""}</div>
+      </div>
+      <a class="btn" href="https://github.com/${esc(r.name)}" target="_blank" rel="noopener">GitHub에서 보기 ↗</a>
+    </div>
+    <dl class="facts">
+      <div><dt>누적 스타</dt><dd>${num(r.stars)}</dd></div>
+      <div><dt>처음 등장</dt><dd>${r.first_seen ? short(r.first_seen) : "–"}</dd></div>
+      <div><dt>마지막 등장</dt><dd>${r.last_seen ? short(r.last_seen) : "–"}</dd></div>
+      <div><dt>등장 일수</dt><dd>${r.appearances}일</dd></div>
+    </dl>
+    <div class="cols">
+      <div>
+        <h2>개요</h2><p>${esc(r.overview)}</p>
+        <h2>주요 기능</h2><ul>${r.features.map(f => `<li>${feat(f)}</li>`).join("")}</ul>
+        ${r.cautions.length ? `<h2>참고·주의</h2><ul>${r.cautions.map(c => `<li>${esc(c)}</li>`).join("")}</ul>` : ""}
+      </div>
+      <div>
+        <div class="panel"><h2>순위 변화 <small>처음 등장한 날부터</small></h2>${chart(r, "rank")}
+          <div class="legend"><span><i style="background:var(--today)"></i>Today</span><span><i style="background:var(--week)"></i>This week</span><span><i style="background:var(--month)"></i>This month</span></div></div>
+        <div class="panel"><h2>누적 스타</h2>${chart(r, "stars")}</div>
+        <div class="panel"><h2>등장 기록</h2><table class="hist"><tr><th>날짜</th><th>Today</th><th>Week</th><th>Month</th><th>★</th></tr>
+          ${[...r.history].reverse().map(h => `<tr><td><a href="#/day/${h.date}">${short(h.date)}</a></td>${PERIODS.repos.map(k => `<td>${h[k] ? h[k].rank + "위" : "–"}</td>`).join("")}<td>${num(h.stars)}</td></tr>`).join("")}</table></div>
+      </div>
+    </div>`;
+}
+
+function renderRepos(params) {
+  if (params.get("cat") != null) state.fcat = params.get("cat");
+  const seen = D.repos.filter(r => r.appearances > 0);  // 대표 저장소로만 본 노트·전환 전 노트는 등장하기 전까지 숨김
+  const cats = [...new Set(seen.flatMap(r => r.categories))].sort((a, b) => a.localeCompare(b, "ko"));
+  const langs = [...new Set(seen.map(r => r.language).filter(Boolean))].sort();
+  app.innerHTML = `
+    <h1 class="page">전체 저장소</h1>
+    <div class="filters">
+      <input type="search" id="q" placeholder="이름이나 요약으로 검색" value="${esc(state.q)}" aria-label="검색">
+      <select id="fcat" aria-label="카테고리"><option value="">모든 카테고리</option>${cats.map(c => `<option ${state.fcat === c ? "selected" : ""}>${esc(c)}</option>`).join("")}</select>
+      <select id="flang" aria-label="언어"><option value="">모든 언어</option>${langs.map(l => `<option ${state.flang === l ? "selected" : ""}>${esc(l)}</option>`).join("")}</select>
+      <select id="sort" aria-label="정렬">
+        <option value="recent">최근 등장순</option><option value="first">처음 등장순</option><option value="appear">등장 일수순</option><option value="stars">스타순</option>
+      </select>
+    </div>
+    <div class="filters-2"><label><input type="checkbox" id="recent" ${state.recent ? "checked" : ""}> 최근 7일 안에 처음 등장한 저장소만</label><span id="count"></span></div>
+    <div class="board list" id="list"></div>`;
+  app.querySelector("#sort").value = state.sort;
+  const draw = () => {
+    const q = state.q.trim().toLowerCase();
+    const cutoff = days[Math.max(0, days.length - 7)];
+    let rs = seen.filter(r => (!q || (r.name + " " + r.summary + " " + r.overview).toLowerCase().includes(q))
+      && (!state.fcat || r.categories.includes(state.fcat)) && (!state.flang || r.language === state.flang)
+      && (!state.recent || r.first_seen >= cutoff));
+    const key = { recent: r => r.last_seen, first: r => r.first_seen, appear: r => r.appearances, stars: r => r.stars };
+    rs.sort((a, b) => (key[state.sort](b) > key[state.sort](a) ? 1 : key[state.sort](b) < key[state.sort](a) ? -1 : (b.stars || 0) - (a.stars || 0)));
+    app.querySelector("#count").textContent = `${rs.length}개`;
+    app.querySelector("#list").innerHTML = rs.length ? rs.map(r => `
+      <a class="row" href="${repoHref(r.name)}">
+        <div><div class="nm">${nameHtml(r.name)}</div><div class="sm">${esc(r.summary)}</div>
+          <div class="meta">${r.categories.map(c => `<span class="chip">${esc(c)}</span>`).join("")}${r.language ? `<span>${esc(r.language)}</span>` : ""}</div></div>
+        <div class="num"><b>${short(r.first_seen)}</b>처음 등장</div>
+        <div class="num"><b>${r.appearances}일</b>등장</div>
+        <div class="num"><b>${num(r.stars)}</b>누적 ★</div>
+      </a>`).join("") : `<div class="empty">조건에 맞는 저장소가 없습니다. 검색어나 필터를 줄여 보세요.</div>`;
+  };
+  app.querySelector("#q").oninput = e => { state.q = e.target.value; draw(); };
+  for (const id of ["fcat", "flang", "sort"]) app.querySelector("#" + id).onchange = e => { state[id] = e.target.value; draw(); };
+  app.querySelector("#recent").onchange = e => { state.recent = e.target.checked; draw(); };
+  draw();
+}
+
+function route() {
+  const [path, qs] = (location.hash.slice(1) || "/").split("?");
+  const parts = path.split("/").filter(Boolean);
+  let nav = "day";
+  if (parts[0] === "repo") { renderRepo(decodeURIComponent(parts.slice(1).join("/"))); nav = ""; }
+  else if (parts[0] === "repos") { renderRepos(new URLSearchParams(qs)); nav = "repos"; }
+  else { renderDay(parts[0] === "day" ? parts[1] : latest); nav = parts[0] === "day" && parts[1] !== latest ? "" : "day"; }
+  document.querySelectorAll("[data-nav]").forEach(a => a.dataset.nav === nav ? a.setAttribute("aria-current", "page") : a.removeAttribute("aria-current"));
+  if (!parts[0] || parts[0] !== "day") window.scrollTo(0, 0);
+}
+document.getElementById("theme").onclick = () => {
+  const dark = document.documentElement.dataset.theme ? document.documentElement.dataset.theme === "dark" : matchMedia("(prefers-color-scheme: dark)").matches;
+  document.documentElement.dataset.theme = dark ? "light" : "dark";
+  try { localStorage.setItem("theme", document.documentElement.dataset.theme); } catch {}
+};
+try { const t = localStorage.getItem("theme"); if (t) document.documentElement.dataset.theme = t; } catch {}
+addEventListener("hashchange", route);
+route();
+{% endraw %}
+</script>
+</body>
+</html>

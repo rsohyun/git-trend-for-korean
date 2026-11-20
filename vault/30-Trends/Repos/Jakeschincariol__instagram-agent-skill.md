@@ -1,0 +1,34 @@
+---
+repo: Jakeschincariol/instagram-agent-skill
+url: https://github.com/Jakeschincariol/instagram-agent-skill
+language: Python
+stars: 7412
+summary: "Claude에 추가해 인스타그램 계정 운영을 자동화하는 13가지 스킬 모음입니다."
+main_category: "AI 에이전트"
+categories: ["AI 에이전트", "개발자 도구", "마케팅"]
+first_seen: 2026-11-20
+last_seen: 2026-11-20
+appearances: 1
+tags: [ai-trend, repo]
+---
+# Jakeschincariol/instagram-agent-skill
+
+> Claude에 추가해 인스타그램 계정 운영을 자동화하는 13가지 스킬 모음입니다.
+
+## 개요
+인스타그램 콘텐츠 기획과 제작 과정의 번거로움을 해결해 주는 도구입니다. 릴스 대본 작성, 인기 게시물 분석, 캡션 미리보기, 프로필 진단 등 계정 운영 전반을 돕습니다. 사용자가 Claude에 명령어를 입력하면 스킬이 작동하여 대본, 분석 결과, 수정 제안 등을 생성해 줍니다.
+
+## 주요 기능
+- ig-reel: 26가지 공식으로 릴스 대본을 작성하고 훅의 효과를 미리 점수화
+- ig-viral: 닉내임 내에서 실제 반응이 좋은 릴스를 찾아 순위별로 분석
+- ig-caption: 피드에 노출되는 125자 기준으로 캡션을 검토하고 수정
+- ig-profile: 12가지 기준에 따라 프로필을 진단하고 개선 사항을 순서대로 제안
+- ig-human: AI가 작성한 문구에서 부자연스러운 표현과 보이지 않는 특수문자를 제거
+
+## 참고·주의
+- Claude 환경과 Claude Code 또는 관련 플러그인이 필요합니다.
+
+## 등장 기록
+| 날짜 | Today | Week | Month | ★ |
+|---|---|---|---|---|
+| 2026-11-20 | – | – | 7위 (+5,322) | 7,412 |

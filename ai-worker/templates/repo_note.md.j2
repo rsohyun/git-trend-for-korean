@@ -1,0 +1,38 @@
+---
+repo: {{ r.full_name }}
+url: https://github.com/{{ r.full_name }}
+language: {{ r.language or "" }}
+stars: {{ r.stars if r.stars is not none else "" }}
+summary: {{ r.detail.one_liner | yaml }}
+main_category: {{ r.detail.categories[0] | yaml }}
+categories: {{ r.detail.categories | yaml }}
+first_seen: {{ today if row else "" }}
+last_seen: {{ today if row else "" }}
+appearances: {{ 1 if row else 0 }}
+tags: [ai-trend, repo]
+---
+# {{ r.full_name }}
+
+> {{ r.detail.one_liner }}
+
+## 개요
+{{ r.detail.overview }}
+
+## 주요 기능
+{% for f in r.detail.features %}
+- {{ f }}
+{% endfor %}
+
+## 참고·주의
+{% for c in r.detail.cautions %}
+- {{ c }}
+{% else %}
+- README에 명시된 주의사항 없음
+{% endfor %}
+
+## 등장 기록
+| 날짜 | Today | Week | Month | ★ |
+|---|---|---|---|---|
+{% if row %}
+{{ row }}
+{% endif %}
