@@ -2,35 +2,41 @@
 
 # git-trend-for-korean
 
-> Collects GitHub's official trending repositories every day, summarizes each README in Korean, and publishes the results to a website, Obsidian notes, and email.
+> An automation project that collects GitHub's official trending repositories and developers every day, summarizes the READMEs of notable repositories in Korean, and delivers the results through a website, Obsidian notes, and email.
 
 🔗 **Site: https://gittrendforkorean-site.vercel.app**
 
-- Collects **GitHub's official trending** Repositories (Today · This week · This month) and Developers (This week · This month) every day.
-- Newly seen repositories get their README **summarized in Korean by an LLM (Gemini)**. A repository is never summarized twice.
-- One Obsidian note per repository; each later appearance is added as one line to that note's history.
-- Repositories and developers that were not on the previous day's list are marked **NEW**.
-- Runs and deploys daily with **GitHub Actions + Vercel** only, no server.
+- **Official GitHub trending collection**: Automatically collects the Repositories (Today · This week · This month) and Developers (This week · This month) lists every day.
+- **Korean README summaries**: Summarizes the README of each newly appearing repository in Korean using an LLM (Gemini). A repository that has already been summarized is not processed again.
+- **Per-repository history**: Creates an Obsidian note for each repository and appends the date and appearance record every time it shows up on trending again.
+- **NEW badges**: Marks repositories and developers that were not on the previous day's trending list.
+- **Serverless automation**: Runs everything from data collection to website deployment with GitHub Actions and Vercel, with no server to operate.
 
 > Note: summaries and the site are in **Korean**.
 
 ## 💡 Background
 
-New AI tools and open-source projects often show up first on GitHub Trending. But the trending page only gives a one-line English description, so finding out what a repository actually does meant opening and reading each README. The list also changes every day, which made it hard to find a repository I had seen a few days earlier.
+As AI and the open-source ecosystem evolve rapidly, new tools and projects appear every day. GitHub Trending in particular is a useful source for seeing which technologies and repositories developers are paying attention to right now.
+
+However, most repositories on the trending list are described in English. Understanding a project's purpose and main features meant opening each README and translating it, or summarizing it separately with an LLM. And even when I found an interesting repository, unless I recorded it somewhere, it was hard to notice when it appeared again or to compare it with past trends.
+
+I wanted more than a quick way to learn about new technologies and services: I needed an environment where I could keep tracking the projects I care about and build up a record over time. So I built an automated system that covers everything from collecting GitHub trending data to Korean summaries, history tracking, and sharing the results.
 
 ## 🎯 The Solution
 
-Every morning the trending lists are collected automatically, and the README of each newly seen repository is summarized in Korean. The results go to three places:
+GitHub's official trending data is collected automatically every day, and the README of each newly appearing repository is summarized in Korean. The results are available through three channels:
 
-- **Website**: public daily trending lists with Korean summaries
-- **Obsidian notes**: per-repository summaries and appearance history, searchable later
-- **Email**: the day's list, delivered before work
+- **Website**: Daily lists of trending repositories and developers, with NEW markers and Korean summaries, available to anyone
+- **Obsidian notes**: Per-repository summaries and trending history accumulated over time, so projects of interest can be searched and past records revisited
+- **Email**: The day's key trending information delivered every morning, so new technologies and projects can be checked without visiting the site
 
 ## 🚀 Benefits
 
-- **Quick understanding**: see what a repository is for in Korean without reading its README
-- **Accumulated history**: daily snapshots and repository notes make past trends easy to revisit
-- **Minimal running cost**: no server; runs within the free tiers of GitHub Actions and Vercel
+- **Better accessibility**: Quickly understand a project's purpose and main features in Korean without reading each English README
+- **Trend tracking**: Follow how notable technologies and projects change over time through daily trending records and NEW markers
+- **Knowledge building**: Keep a continuous record of per-repository summaries and appearance history as a personal tech archive
+- **Efficient access**: Check the information you need the way you prefer, on the website or by email
+- **Minimal running cost**: Collection, processing, and deployment are automated with GitHub Actions and Vercel, with no server to build
 
 ## How it works
 
