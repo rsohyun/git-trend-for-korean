@@ -2,13 +2,13 @@
 repo: google-labs-code/stitch-skills
 url: https://github.com/google-labs-code/stitch-skills
 language: TypeScript
-stars: 10771
+stars: 11092
 summary: "Google Stitch 환경에서 코딩 에이전트가 디자인 작업과 코드 생성을 수행할 수 있도록 돕는 에이전트 스킬 모음입니다."
 main_category: "AI 에이전트"
 categories: ["AI 에이전트", "개발자 도구", "디자인"]
 first_seen: 2026-11-16
-last_seen: 2026-11-20
-appearances: 5
+last_seen: 2026-11-21
+appearances: 6
 tags: [ai-trend, repo]
 ---
 # google-labs-code/stitch-skills
@@ -37,3 +37,4 @@ AI 코딩 에이전트가 디자인 도구와 원활하게 연동되지 않아 �
 | 2026-11-18 | 7위 (+350) | 12위 (+1,197) | – | 10,159 |
 | 2026-11-19 | 9위 (+365) | 6위 (+1,567) | – | 10,454 |
 | 2026-11-20 | 11위 (+302) | 2위 (+1,829) | 13위 (+2,107) | 10,771 |
+| 2026-11-21 | 11위 (+315) | 2위 (+2,152) | 13위 (+2,406) | 11,092 |

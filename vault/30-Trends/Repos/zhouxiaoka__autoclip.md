@@ -2,13 +2,13 @@
 repo: zhouxiaoka/autoclip
 url: https://github.com/zhouxiaoka/autoclip
 language: Python
-stars: 11423
+stars: 12282
 summary: "긴 영상을 입력하면 AI가 자동으로 숏폼 영상, 자막, 썸네일, 홍보 문구를 만들어 주는 오픈소스 데스크톱 도구입니다."
 main_category: "AI 에이전트"
 categories: ["AI 에이전트", "기기 유틸", "개발자 도구"]
 first_seen: 2026-11-20
-last_seen: 2026-11-20
-appearances: 1
+last_seen: 2026-11-21
+appearances: 2
 tags: [ai-trend, repo]
 ---
 # zhouxiaoka/autoclip
@@ -31,3 +31,4 @@ tags: [ai-trend, repo]
 | 날짜 | Today | Week | Month | ★ |
 |---|---|---|---|---|
 | 2026-11-20 | 16위 (+126) | – | – | 11,423 |
+| 2026-11-21 | 16위 (+979) | – | – | 12,282 |

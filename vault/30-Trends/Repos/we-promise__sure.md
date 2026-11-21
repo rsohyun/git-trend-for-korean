@@ -2,13 +2,13 @@
 repo: we-promise/sure
 url: https://github.com/we-promise/sure
 language: Ruby
-stars: 16745
+stars: 16934
 summary: "자신의 자산과 현금 흐름을 한눈에 관리하고 AI 비서와 상담할 수 있는 개인 자산 관리 프로그램입니다."
 main_category: "기기 유틸"
 categories: ["기기 유틸", "개발자 도구"]
 first_seen: 2026-11-11
-last_seen: 2026-11-20
-appearances: 10
+last_seen: 2026-11-21
+appearances: 11
 tags: [ai-trend, repo]
 ---
 # we-promise/sure
@@ -40,3 +40,4 @@ tags: [ai-trend, repo]
 | 2026-11-18 | – | 4위 (+4,786) | – | 16,298 |
 | 2026-11-19 | – | 4위 (+3,866) | – | 16,527 |
 | 2026-11-20 | – | 11위 (+3,226) | – | 16,745 |
+| 2026-11-21 | – | 11위 (+2,476) | – | 16,934 |

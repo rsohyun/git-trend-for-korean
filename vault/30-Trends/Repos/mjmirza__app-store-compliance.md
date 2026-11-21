@@ -2,13 +2,13 @@
 repo: mjmirza/app-store-compliance
 url: https://github.com/mjmirza/app-store-compliance
 language: Shell
-stars: 1961
+stars: 2824
 summary: "앱스토어와 구글 플레이의 앱 심사 반려를 미리 막아 주는 검사 도구이자 대응 지침서입니다."
 main_category: "개발자 도구"
 categories: ["개발자 도구", "모바일 앱", "보안"]
 first_seen: 2026-11-20
-last_seen: 2026-11-20
-appearances: 1
+last_seen: 2026-11-21
+appearances: 2
 tags: [ai-trend, repo]
 ---
 # mjmirza/app-store-compliance
@@ -32,3 +32,4 @@ tags: [ai-trend, repo]
 | 날짜 | Today | Week | Month | ★ |
 |---|---|---|---|---|
 | 2026-11-20 | 12위 (+377) | – | – | 1,961 |
+| 2026-11-21 | 12위 (+869) | – | – | 2,824 |

@@ -2,13 +2,13 @@
 repo: sherlock-project/sherlock
 url: https://github.com/sherlock-project/sherlock
 language: Python
-stars: 114677
+stars: 115104
 summary: "특정 사용자 이름으로 400개가 넘는 소셜 미디어 플랫폼에서 계정 존재 여부를 한 번에 찾아 주는 도구입니다."
 main_category: "보안"
 categories: ["보안", "기기 유틸", "개발자 도구"]
 first_seen: 2026-11-08
-last_seen: 2026-11-20
-appearances: 12
+last_seen: 2026-11-21
+appearances: 13
 tags: [ai-trend, repo]
 ---
 # sherlock-project/sherlock
@@ -42,3 +42,4 @@ tags: [ai-trend, repo]
 | 2026-11-18 | – | – | 9위 (+19,596) | 113,855 |
 | 2026-11-19 | – | – | 11위 (+20,046) | 114,245 |
 | 2026-11-20 | – | – | 11위 (+20,350) | 114,677 |
+| 2026-11-21 | – | – | 11위 (+20,748) | 115,104 |

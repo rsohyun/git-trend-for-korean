@@ -2,13 +2,13 @@
 repo: Jakeschincariol/instagram-agent-skill
 url: https://github.com/Jakeschincariol/instagram-agent-skill
 language: Python
-stars: 7412
+stars: 7706
 summary: "Claude에 추가해 인스타그램 계정 운영을 자동화하는 13가지 스킬 모음입니다."
 main_category: "AI 에이전트"
 categories: ["AI 에이전트", "개발자 도구", "마케팅"]
 first_seen: 2026-11-20
-last_seen: 2026-11-20
-appearances: 1
+last_seen: 2026-11-21
+appearances: 2
 tags: [ai-trend, repo]
 ---
 # Jakeschincariol/instagram-agent-skill
@@ -32,3 +32,4 @@ tags: [ai-trend, repo]
 | 날짜 | Today | Week | Month | ★ |
 |---|---|---|---|---|
 | 2026-11-20 | – | – | 7위 (+5,322) | 7,412 |
+| 2026-11-21 | – | – | 7위 (+5,504) | 7,706 |

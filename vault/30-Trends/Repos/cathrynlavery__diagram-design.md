@@ -2,13 +2,13 @@
 repo: cathrynlavery/diagram-design
 url: https://github.com/cathrynlavery/diagram-design
 language: HTML
-stars: 68746
+stars: 69354
 summary: "AI 코딩 도구에서 깔끔하고 세련된 HTML·SVG 형식의 다이어그램을 자동으로 그려주는 에이전트 스킬입니다."
 main_category: "AI 에이전트"
 categories: ["AI 에이전트", "개발자 도구", "디자인 도구"]
 first_seen: 2026-11-20
-last_seen: 2026-11-20
-appearances: 1
+last_seen: 2026-11-21
+appearances: 2
 tags: [ai-trend, repo]
 ---
 # cathrynlavery/diagram-design
@@ -30,3 +30,4 @@ tags: [ai-trend, repo]
 | 날짜 | Today | Week | Month | ★ |
 |---|---|---|---|---|
 | 2026-11-20 | 9위 (+271) | – | – | 68,746 |
+| 2026-11-21 | 9위 (+636) | – | – | 69,354 |

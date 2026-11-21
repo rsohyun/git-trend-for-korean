@@ -2,13 +2,13 @@
 repo: Tracer-Cloud/opensre
 url: https://github.com/Tracer-Cloud/opensre
 language: Python
-stars: 13199
+stars: 13674
 summary: "실패한 CI/CD 빌드의 원인을 분석하고 해결책을 찾아 수정안을 만들어 주는 오픈소스 CLI 에이전트입니다."
 main_category: "개발자 도구"
 categories: ["개발자 도구", "CI/CD", "AI 에이전트"]
 first_seen: 2026-11-20
-last_seen: 2026-11-20
-appearances: 1
+last_seen: 2026-11-21
+appearances: 2
 tags: [ai-trend, repo]
 ---
 # Tracer-Cloud/opensre
@@ -31,3 +31,4 @@ CI/CD 빌드가 실패했을 때 개발자가 직접 로그를 분석하고 원�
 | 날짜 | Today | Week | Month | ★ |
 |---|---|---|---|---|
 | 2026-11-20 | 13위 (+38) | – | – | 13,199 |
+| 2026-11-21 | 13위 (+466) | – | – | 13,674 |

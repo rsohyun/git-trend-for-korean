@@ -2,13 +2,13 @@
 repo: GoogleChrome/modern-web-guidance-src
 url: https://github.com/GoogleChrome/modern-web-guidance-src
 language: TypeScript
-stars: 9200
+stars: 9559
 summary: "코딩 에이전트가 구형 웹 기술 대신 최신 표준 웹 기술과 브라우저 기능을 사용하도록 안내하는 개발 도구입니다."
 main_category: "AI 에이전트"
 categories: ["AI 에이전트", "개발자 도구", "웹 개발"]
 first_seen: 2026-11-12
-last_seen: 2026-11-20
-appearances: 9
+last_seen: 2026-11-21
+appearances: 10
 tags: [ai-trend, repo]
 ---
 # GoogleChrome/modern-web-guidance-src
@@ -40,3 +40,4 @@ tags: [ai-trend, repo]
 | 2026-11-18 | – | 1위 (+7,015) | – | 8,506 |
 | 2026-11-19 | – | 1위 (+7,257) | – | 8,886 |
 | 2026-11-20 | – | 3위 (+6,858) | – | 9,200 |
+| 2026-11-21 | – | 3위 (+5,224) | – | 9,559 |
