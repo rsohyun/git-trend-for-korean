@@ -2,13 +2,13 @@
 repo: jingyaogong/minimind
 url: https://github.com/jingyaogong/minimind
 language: Python
-stars: 67747
+stars: 68195
 summary: "대규모 언어 모델을 처음부터 직접 만들고 학습해 볼 수 있는 64M 파라미터 크기의 초소형 인공지능 학습 프로젝트입니다."
 main_category: "AI 에이전트"
 categories: ["AI 에이전트", "로컬 AI", "개발자 도구"]
 first_seen: 2026-11-18
-last_seen: 2026-11-21
-appearances: 3
+last_seen: 2026-11-22
+appearances: 4
 tags: [ai-trend, repo]
 ---
 # jingyaogong/minimind
@@ -34,3 +34,4 @@ tags: [ai-trend, repo]
 | 2026-11-18 | 14위 (+192) | – | – | 66,129 |
 | 2026-11-20 | 4위 (+238) | – | – | 67,049 |
 | 2026-11-21 | 4위 (+847) | – | – | 67,747 |
+| 2026-11-22 | 4위 (+488) | – | – | 68,195 |

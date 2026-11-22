@@ -2,13 +2,13 @@
 repo: ag-ui-protocol/ag-ui
 url: https://github.com/ag-ui-protocol/ag-ui
 language: TypeScript
-stars: 20841
+stars: 21037
 summary: "AI 에이전트와 사용자 인터페이스를 쉽게 연결할 수 있게 해 주는 표준 프로토콜입니다."
 main_category: "AI 에이전트"
 categories: ["AI 에이전트", "개발자 도구"]
 first_seen: 2026-11-15
-last_seen: 2026-11-21
-appearances: 7
+last_seen: 2026-11-22
+appearances: 8
 tags: [ai-trend, repo]
 ---
 # ag-ui-protocol/ag-ui
@@ -38,3 +38,4 @@ AI 에이전트를 프론트엔드 애플리케이션에 매끄럽게 통합하�
 | 2026-11-19 | – | 12위 (+3,221) | – | 20,474 |
 | 2026-11-20 | – | 8위 (+3,455) | – | 20,667 |
 | 2026-11-21 | – | 8위 (+3,621) | – | 20,841 |
+| 2026-11-22 | – | 8위 (+3,792) | – | 21,037 |

@@ -2,13 +2,13 @@
 repo: cursor/plugins
 url: https://github.com/cursor/plugins
 language: TypeScript
-stars: 17882
+stars: 18130
 summary: "Cursor 에디터에서 활용할 수 있는 공식 플러그인과 사양을 모아둔 저장소입니다."
 main_category: "개발자 도구"
 categories: ["개발자 도구", "AI 에이전트", "생산성"]
 first_seen: 2026-11-18
-last_seen: 2026-11-21
-appearances: 4
+last_seen: 2026-11-22
+appearances: 5
 tags: [ai-trend, repo]
 ---
 # cursor/plugins
@@ -35,3 +35,4 @@ Cursor AI 에디터의 기능을 확장하여 개발 생산성을 높이고 외�
 | 2026-11-19 | 1위 (+314) | – | – | 17,283 |
 | 2026-11-20 | 5위 (+384) | – | – | 17,600 |
 | 2026-11-21 | 5위 (+299) | – | – | 17,882 |
+| 2026-11-22 | 5위 (+260) | – | – | 18,130 |

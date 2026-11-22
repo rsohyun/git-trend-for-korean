@@ -2,13 +2,13 @@
 repo: meta/astryx
 url: https://github.com/meta/astryx
 language: TypeScript
-stars: 31401
+stars: 31847
 summary: "사람과 AI 어시스턴트가 함께 웹 애플리케이션을 만들 수 있도록 지원하는 오픈소스 디자인 시스템입니다."
 main_category: "개발자 도구"
 categories: ["개발자 도구", "디자인 시스템", "UI 컴포넌트"]
 first_seen: 2026-11-08
-last_seen: 2026-11-21
-appearances: 13
+last_seen: 2026-11-22
+appearances: 14
 tags: [ai-trend, repo]
 ---
 # meta/astryx
@@ -44,3 +44,4 @@ tags: [ai-trend, repo]
 | 2026-11-19 | – | 3위 (+6,250) | – | 30,633 |
 | 2026-11-20 | – | 9위 (+4,977) | – | 31,042 |
 | 2026-11-21 | – | 9위 (+4,131) | – | 31,401 |
+| 2026-11-22 | – | 9위 (+3,967) | – | 31,847 |

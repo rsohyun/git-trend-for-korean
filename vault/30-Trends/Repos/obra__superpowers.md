@@ -2,13 +2,13 @@
 repo: obra/superpowers
 url: https://github.com/obra/superpowers
 language: Shell
-stars: 322927
+stars: 323790
 summary: "AI 코딩 도구가 무작정 코드를 작성하는 대신, 철저한 설계와 계획을 거쳐 자율적으로 개발을 진행하도록 돕는 프레임워크입니다."
 main_category: "AI 에이전트"
 categories: ["AI 에이전트", "개발자 도구"]
 first_seen: 2026-11-04
-last_seen: 2026-11-21
-appearances: 9
+last_seen: 2026-11-22
+appearances: 10
 tags: [ai-trend, repo]
 ---
 # obra/superpowers
@@ -38,3 +38,4 @@ AI 코딩 에이전트가 즉흥적으로 코드를 짜며 생기는 실수를 �
 | 2026-11-19 | 14위 (+822) | – | – | 321,420 |
 | 2026-11-20 | 2위 (+2,028) | – | – | 322,201 |
 | 2026-11-21 | 2위 (+890) | – | – | 322,927 |
+| 2026-11-22 | 2위 (+883) | – | – | 323,790 |
