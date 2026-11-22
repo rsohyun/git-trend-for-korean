@@ -2,7 +2,7 @@
 
 # git-trend-for-korean
 
-> 매일 GitHub 공식 트렌딩 저장소와 개발자를 수집하고, 주요 저장소의 README를 한국어로 요약해 웹사이트·Obsidian 노트·이메일로 제공하는 자동화 프로젝트.
+> 매일 GitHub 공식 트렌딩 저장소를 수집하고, 주요 저장소의 README를 한국어로 요약해 웹사이트·Obsidian 노트·이메일로 제공하는 자동화 프로젝트.
 
 🔗 **사이트: https://gittrendforkorean-site.vercel.app**
 
