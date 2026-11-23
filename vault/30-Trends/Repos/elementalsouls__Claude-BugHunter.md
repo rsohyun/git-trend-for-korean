@@ -2,13 +2,13 @@
 repo: elementalsouls/Claude-BugHunter
 url: https://github.com/elementalsouls/Claude-BugHunter
 language: Python
-stars: 16189
+stars: 18075
 summary: "Claude Code에 버그 사냥과 외부 모의 해킹(Red-team) 전문 지식을 추가해 주는 도구 모음입니다."
 main_category: "보안"
 categories: ["보안", "개발자 도구", "AI 에이전트"]
 first_seen: 2026-11-16
-last_seen: 2026-11-22
-appearances: 6
+last_seen: 2026-11-23
+appearances: 7
 tags: [ai-trend, repo]
 ---
 # elementalsouls/Claude-BugHunter
@@ -36,3 +36,4 @@ tags: [ai-trend, repo]
 | 2026-11-20 | 1위 (+1,349) | – | 15위 (+6,708) | 12,741 |
 | 2026-11-21 | 1위 (+1,622) | – | 15위 (+8,329) | 14,487 |
 | 2026-11-22 | 1위 (+1,803) | – | 15위 (+10,053) | 16,189 |
+| 2026-11-23 | 1위 (+1,716) | – | 15위 (+11,667) | 18,075 |

@@ -2,13 +2,13 @@
 repo: dream-num/univer
 url: https://github.com/dream-num/univer
 language: TypeScript
-stars: 31111
+stars: 31306
 summary: "스프레드시트와 문서 편집 기능을 웹 제품에 직접 넣을 수 있게 해 주는 오픈소스 오피스 SDK입니다."
 main_category: "개발자 도구"
 categories: ["개발자 도구", "오피스", "문서 편집"]
 first_seen: 2026-11-15
-last_seen: 2026-11-22
-appearances: 8
+last_seen: 2026-11-23
+appearances: 9
 tags: [ai-trend, repo]
 ---
 # dream-num/univer
@@ -38,3 +38,4 @@ tags: [ai-trend, repo]
 | 2026-11-20 | – | 12위 (+7,248) | – | 30,337 |
 | 2026-11-21 | – | 12위 (+7,539) | – | 30,969 |
 | 2026-11-22 | – | 12위 (+7,240) | – | 31,111 |
+| 2026-11-23 | – | 12위 (+6,436) | – | 31,306 |

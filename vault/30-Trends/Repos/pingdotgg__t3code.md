@@ -2,13 +2,13 @@
 repo: pingdotgg/t3code
 url: https://github.com/pingdotgg/t3code
 language: TypeScript
-stars: 69679
+stars: 72131
 summary: "T3 Code는 로컬에 설치된 다양한 코딩 AI 에이전트를 모바일·웹·데스크톱 앱으로 제어할 수 있게 해 주는 도구입니다."
 main_category: "개발자 도구"
 categories: ["개발자 도구", "AI 에이전트", "원격 제어"]
 first_seen: 2026-11-04
-last_seen: 2026-11-22
-appearances: 19
+last_seen: 2026-11-23
+appearances: 20
 tags: [ai-trend, repo]
 ---
 # pingdotgg/t3code
@@ -54,3 +54,4 @@ T3 Code는 Claude, Codex, Cursor 등 여러 코딩 AI 에이전트를 하나의 
 | 2026-11-20 | – | – | 4위 (+37,642) | 66,612 |
 | 2026-11-21 | – | – | 4위 (+38,744) | 68,049 |
 | 2026-11-22 | – | – | 4위 (+40,025) | 69,679 |
+| 2026-11-23 | – | – | 4위 (+41,514) | 72,131 |
