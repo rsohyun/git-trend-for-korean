@@ -2,13 +2,13 @@
 repo: HKUDS/DeepTutor
 url: https://github.com/HKUDS/DeepTutor
 language: Python
-stars: 61663
+stars: 62035
 summary: "DeepTutor는 개인 맞춤형 평생 학습을 제공하는 AI 기반 튜터링 플랫폼입니다."
 main_category: "AI 에이전트"
 categories: ["AI 에이전트", "교육", "개발자 도구"]
 first_seen: 2026-11-06
-last_seen: 2026-11-23
-appearances: 17
+last_seen: 2026-11-24
+appearances: 18
 tags: [ai-trend, repo]
 ---
 # HKUDS/DeepTutor
@@ -50,3 +50,4 @@ DeepTutor는 사용자의 학습 이력과 목표를 기반으로 맞춤형 학�
 | 2026-11-21 | – | – | 9위 (+19,469) | 61,143 |
 | 2026-11-22 | – | – | 9위 (+19,602) | 61,380 |
 | 2026-11-23 | – | – | 9위 (+19,718) | 61,663 |
+| 2026-11-24 | – | – | 9위 (+19,919) | 62,035 |

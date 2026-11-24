@@ -2,13 +2,13 @@
 repo: XiaoYouChR/Ghost-Downloader-3
 url: https://github.com/XiaoYouChR/Ghost-Downloader-3
 language: Python
-stars: 15348
+stars: 16638
 summary: "다양한 프로토콜과 웹사이트의 파일을 안정적으로 내려받을 수 있는 통합 다운로더입니다."
 main_category: "개발자 도구"
 categories: ["개발자 도구", "기기 유틸"]
 first_seen: 2026-11-20
-last_seen: 2026-11-23
-appearances: 4
+last_seen: 2026-11-24
+appearances: 5
 tags: [ai-trend, repo]
 ---
 # XiaoYouChR/Ghost-Downloader-3
@@ -35,3 +35,4 @@ tags: [ai-trend, repo]
 | 2026-11-21 | 15위 (+1,082) | – | – | 13,824 |
 | 2026-11-22 | 15위 (+779) | – | – | 14,508 |
 | 2026-11-23 | 15위 (+701) | – | – | 15,348 |
+| 2026-11-24 | 15위 (+1,087) | – | – | 16,638 |

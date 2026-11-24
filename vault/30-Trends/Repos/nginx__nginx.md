@@ -2,13 +2,13 @@
 repo: nginx/nginx
 url: https://github.com/nginx/nginx
 language: C
-stars: 32910
+stars: 33096
 summary: "웹 서버, 부하 분산기(로드 밸런서), 리버스 프록시 등으로 사용할 수 있는 오픈소스 프로그램입니다."
 main_category: "웹 서버"
 categories: ["웹 서버", "개발자 도구", "인프라"]
 first_seen: 2026-11-20
-last_seen: 2026-11-23
-appearances: 4
+last_seen: 2026-11-24
+appearances: 5
 tags: [ai-trend, repo]
 ---
 # nginx/nginx
@@ -36,3 +36,4 @@ tags: [ai-trend, repo]
 | 2026-11-21 | 7위 (+246) | – | – | 32,597 |
 | 2026-11-22 | 7위 (+189) | – | – | 32,745 |
 | 2026-11-23 | 7위 (+163) | – | – | 32,910 |
+| 2026-11-24 | 7위 (+174) | – | – | 33,096 |

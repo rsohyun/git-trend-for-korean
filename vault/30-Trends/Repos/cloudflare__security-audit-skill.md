@@ -2,13 +2,13 @@
 repo: cloudflare/security-audit-skill
 url: https://github.com/cloudflare/security-audit-skill
 language: JavaScript
-stars: 77147
+stars: 77636
 summary: "코딩 에이전트를 보안 감사 도구로 전환해, 다단계 검증과 기계 판독 가능한 결과를 제공하는 스킬입니다."
 main_category: "보안"
 categories: ["보안", "AI 에이전트", "개발자 도구"]
 first_seen: 2026-11-04
-last_seen: 2026-11-23
-appearances: 20
+last_seen: 2026-11-24
+appearances: 21
 tags: [ai-trend, repo]
 ---
 # cloudflare/security-audit-skill
@@ -55,3 +55,4 @@ security-audit 스킬은 AI 기반 코딩 에이전트가 코드베이스를 체
 | 2026-11-21 | – | – | 2위 (+43,310) | 76,347 |
 | 2026-11-22 | – | – | 2위 (+41,810) | 76,725 |
 | 2026-11-23 | – | – | 2위 (+39,307) | 77,147 |
+| 2026-11-24 | – | – | 2위 (+36,869) | 77,636 |
