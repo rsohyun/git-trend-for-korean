@@ -329,7 +329,7 @@ function renderDay(date) {
           <div class="meta">${x.r.categories[0] ? `<span class="chip">${esc(x.r.categories[0])}</span>` : ""}${x.language ? `<span>${esc(x.language)}</span>` : ""}${x.nth > 1 ? `<span>${x.nth}일째 등장</span>` : ""}</div>
         </div>
         <div class="vel"><div class="bar"><i style="width:${Math.round(100 * (x.gain || 0) / maxGain)}%"></i></div><b>+${num(x.gain)}</b> ★ / ${unit}</div>
-        <div class="tot"><b>${num(x.stars)}</b>누적 ★</div>
+        <div class="tot"><b>${num(x.stars)}</b>수집 시점 ★</div>
       </a>`).join("") : `<div class="empty">이 카테고리의 저장소가 없습니다. 전체를 눌러 모두 보세요.</div>`}
     </div>` : `<div class="board devs k-${state.tab}" role="tabpanel">${(devs[state.tab] || []).map(devRow).join("") || '<div class="empty">개발자 목록이 없습니다.</div>'}</div>`}`;
   app.querySelectorAll(".kinds button").forEach(b => b.onclick = () => { state.kind = b.dataset.kind; state.cat = null; renderDay(date); });
@@ -363,7 +363,7 @@ function chart(r, kind) {
   }
   const step = Math.ceil(span.length / 7);
   const xl = span.map((d, i) => i % step === 0 || i === span.length - 1 ? `<text x="${xs(d)}" y="${H - 6}" text-anchor="middle">${short(d)}</text>` : "").join("");
-  return `<svg class="chart" viewBox="0 0 ${W} ${H}" role="img" aria-label="${kind === "rank" ? "날짜별 순위" : "날짜별 누적 스타"}">${yLabels}${xl}${lines}</svg>`;
+  return `<svg class="chart" viewBox="0 0 ${W} ${H}" role="img" aria-label="${kind === "rank" ? "날짜별 순위" : "날짜별 스타 수"}">${yLabels}${xl}${lines}</svg>`;
 }
 
 function renderRepo(name) {
@@ -379,7 +379,7 @@ function renderRepo(name) {
       <a class="btn" href="https://github.com/${esc(r.name)}" target="_blank" rel="noopener">GitHub에서 보기 ↗</a>
     </div>
     <dl class="facts">
-      <div><dt>누적 스타</dt><dd>${num(r.stars)}</dd></div>
+      <div><dt>스타 (마지막 등장일 기준)</dt><dd>${num(r.stars)}</dd></div>
       <div><dt>처음 등장</dt><dd>${r.first_seen ? short(r.first_seen) : "–"}</dd></div>
       <div><dt>마지막 등장</dt><dd>${r.last_seen ? short(r.last_seen) : "–"}</dd></div>
       <div><dt>등장 일수</dt><dd>${r.appearances}일</dd></div>
@@ -393,7 +393,7 @@ function renderRepo(name) {
       <div>
         <div class="panel"><h2>순위 변화 <small>처음 등장한 날부터</small></h2>${chart(r, "rank")}
           <div class="legend"><span><i style="background:var(--today)"></i>Today</span><span><i style="background:var(--week)"></i>This week</span><span><i style="background:var(--month)"></i>This month</span></div></div>
-        <div class="panel"><h2>누적 스타</h2>${chart(r, "stars")}</div>
+        <div class="panel"><h2>날짜별 스타 수</h2>${chart(r, "stars")}</div>
         <div class="panel"><h2>등장 기록</h2><table class="hist"><tr><th>날짜</th><th>Today</th><th>Week</th><th>Month</th><th>★</th></tr>
           ${[...r.history].reverse().map(h => `<tr><td><a href="#/day/${h.date}">${short(h.date)}</a></td>${PERIODS.repos.map(k => `<td>${h[k] ? h[k].rank + "위" : "–"}</td>`).join("")}<td>${num(h.stars)}</td></tr>`).join("")}</table></div>
       </div>
@@ -433,7 +433,7 @@ function renderRepos(params) {
           <div class="meta">${r.categories.map(c => `<span class="chip">${esc(c)}</span>`).join("")}${r.language ? `<span>${esc(r.language)}</span>` : ""}</div></div>
         <div class="num"><b>${short(r.first_seen)}</b>처음 등장</div>
         <div class="num"><b>${r.appearances}일</b>등장</div>
-        <div class="num"><b>${num(r.stars)}</b>누적 ★</div>
+        <div class="num"><b>${num(r.stars)}</b>마지막 등장일 기준 ★</div>
       </a>`).join("") : `<div class="empty">조건에 맞는 저장소가 없습니다. 검색어나 필터를 줄여 보세요.</div>`;
   };
   app.querySelector("#q").oninput = e => { state.q = e.target.value; draw(); };
