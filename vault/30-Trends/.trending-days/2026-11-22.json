@@ -1,6 +1,7 @@
 {
  "date": "2026-11-22",
  "collected_at": "2026-11-22T11:56+09:00",
+ "stale": true,
  "repos": {
   "daily": [
    {

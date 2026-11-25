@@ -111,7 +111,7 @@ def test_first_run_writes_notes_and_snapshot_without_new_marks(client, auth, fak
     assert "소개 문구: acme/tv 설명" in fake_llm.calls[0][1] and "acme/tv README" in fake_llm.calls[0][1]
     assert "소개 문구: 앨리스의 대표 저장소" in fake_llm.calls[-1][1]
     snap = _snap("2026-11-05")
-    assert set(snap) == {"date", "collected_at", "repos", "developers"}
+    assert set(snap) == {"date", "collected_at", "stale", "repos", "developers"} and snap["stale"] is False
     assert [e["name"] for e in snap["repos"]["daily"]] == ["acme/rea", "acme/tv"]
     assert snap["repos"]["weekly"][1] == {"name": "acme/weekonly", "rank": 2, "gain": 13000, "stars": 3000,
                                           "language": "Python", "is_new": False, "summary": "테스트 저장소",
@@ -288,3 +288,18 @@ def test_rate_limit_waits_and_retries_then_summarizes_all(client, auth, fakes, o
     assert body["warnings"] == [] and len(body["written"]) == 4  # tv, weekonly, rea, alice/devonly
     assert sleeps.count(RATE_LIMIT_WAIT_S) == 1
     assert sleeps.count(SUMMARY_INTERVAL_S) == len(body["written"]) - 1  # 요약 사이마다 한 번씩
+
+
+def test_is_stale_only_when_every_list_matches_in_order():
+    from app.gittrend import is_stale
+
+    lists = {"daily": [{"full_name": "a/x"}, {"full_name": "b/y"}], "weekly": [{"full_name": "c/z"}]}
+    prev = {"repos": {"daily": [{"name": "a/x"}, {"name": "b/y"}], "weekly": [{"name": "c/z"}]}}
+    assert is_stale(lists, prev)
+    assert not is_stale(lists, None)  # 첫날
+    swapped = {"repos": {"daily": [{"name": "b/y"}, {"name": "a/x"}], "weekly": [{"name": "c/z"}]}}
+    assert not is_stale(lists, swapped)  # 순서만 바뀌어도 갱신된 것
+    changed = {"repos": {"daily": [{"name": "a/x"}, {"name": "b/y"}], "weekly": [{"name": "d/w"}]}}
+    assert not is_stale(lists, changed)
+    month_moved = {"repos": {**prev["repos"], "monthly": [{"name": "e/v"}]}}
+    assert is_stale({**lists, "monthly": [{"full_name": "f/u"}]}, month_moved)  # This month 변화는 무시

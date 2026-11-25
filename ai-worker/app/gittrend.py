@@ -32,6 +32,7 @@ SUMMARY_INTERVAL_S = 10
 RATE_LIMIT_WAIT_S = 70
 RATE_LIMIT_RETRIES = 2
 REPOS_DIR = "30-Trends/Repos"
+STALE_PERIODS = ("daily", "weekly")  # 갱신 멈춤 판정에 쓰는 목록
 DAYS_DIR = "30-Trends/.trending-days"  # 날짜별 목록 스냅샷, 사이트 날짜별 화면의 원본 (D49)
 _SAFE_NAME = re.compile(r"^[A-Za-z0-9-]+/[A-Za-z0-9._-]+$")  # 외부 값으로 파일 경로를 만들기 때문에 검사
 
@@ -118,7 +119,20 @@ def previous_snapshot(days_dir: Path, today) -> dict | None:
     return json.loads(earlier[-1].read_text(encoding="utf-8")) if earlier else None
 
 
-def write_snapshot(path: Path, repo_lists: dict, dev_lists: dict, today, prev: dict | None) -> dict:
+def is_stale(repo_lists: dict, prev: dict | None) -> bool:
+    """Today·This week 저장소 목록의 구성과 순서가 직전 스냅샷과 모두 같으면 GitHub가 트렌딩을 갱신하지 않은 날로 본다.
+
+    스타 수는 요청마다 바뀌므로 비교하지 않는다. This month는 멈춘 동안에도 한두 개씩 바뀌어 기준에서 뺀다
+    (2026-11-24·25). 2025-11, 2026-11에 목록만 몇 주씩 멈춘 적이 있다.
+    """
+    if not prev:
+        return False
+    return all([r["full_name"] for r in repo_lists.get(p, [])] == [e["name"] for e in prev["repos"].get(p, [])]
+               for p in STALE_PERIODS)
+
+
+def write_snapshot(path: Path, repo_lists: dict, dev_lists: dict, today, prev: dict | None,
+                   stale: bool = False) -> dict:
     """NEW를 판정해 각 항목의 is_new에 채우고 그날 목록을 저장한다.
 
     직전 스냅샷의 같은 목록에 없던 이름이 NEW다. 직전 스냅샷이 없으면(첫날) NEW 없음.
@@ -140,7 +154,7 @@ def write_snapshot(path: Path, repo_lists: dict, dev_lists: dict, today, prev: d
     for period, items in dev_lists.items():
         mark(items, "developers", period, "login", "login")
     snapshot = {
-        "date": today.isoformat(), "collected_at": datetime.now(KST).isoformat(timespec="minutes"),
+        "date": today.isoformat(), "collected_at": datetime.now(KST).isoformat(timespec="minutes"), "stale": stale,
         "repos": {p: [{"name": r["full_name"], "rank": r["rank"], "gain": r["gain"], "stars": r["stars"],
                        "language": r["language"], "is_new": r["is_new"], "summary": r["summary"] or r["description"],
                        "categories": r["categories"]} for r in items] for p, items in repo_lists.items()},
@@ -226,15 +240,17 @@ def build_daily(http: httpx.Client, gh: GitHubClient, llm: LLMClient, tracer: Tr
     dev_lists = {p: [{**d, "repo_summary": (by_name.get(d["repo"]) or {}).get("summary") or d["repo_description"]}
                      for d in data["developers"][p]] for p in DEV_PERIODS}
     days_dir = vault / DAYS_DIR
-    write_snapshot(days_dir / f"{today}.json", repo_lists, dev_lists, today, previous_snapshot(days_dir, today))
+    prev = previous_snapshot(days_dir, today)
+    stale = is_stale(repo_lists, prev)
+    write_snapshot(days_dir / f"{today}.json", repo_lists, dev_lists, today, prev, stale)
     week_list, today_list = repo_lists["weekly"], repo_lists["daily"]
     new_count = len({r["full_name"] for r in week_list + today_list if r["is_new"]})
     email_html = env.get_template("gittrend_email.html.j2").render(
         week_list=week_list, today_list=today_list, repos=repos, today=today, site_url=get_settings().site_url,
         weekday="월화수목금토일"[today.weekday()], collected_at=datetime.now(KST).strftime("%H:%M"),
-        new_count=new_count, warnings=warnings)
+        new_count=new_count, warnings=warnings, stale=stale)
     return {"date": today.isoformat(), "repo_count": sum(not r.get("dev_only") for r in repos),
-            "new_count": new_count, "written": written, "warnings": warnings, "email_html": email_html}
+            "new_count": new_count, "stale": stale, "written": written, "warnings": warnings, "email_html": email_html}
 
 
 @router.post("/gittrend/daily")

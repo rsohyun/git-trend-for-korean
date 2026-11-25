@@ -39,6 +39,11 @@
   <div style="font-size:12px;color:#57606a;margin-top:6px;">출처: <a href="https://github.com/trending" style="color:#57606a;">GitHub Trending</a> This week·Today · 수집 {{ today }} {{ collected_at }} (KST)</div>
   <div style="font-size:12px;color:#57606a;margin-top:4px;"><span style="display:inline-block;width:12px;height:12px;background:#FFF8D6;border:1px solid #F5B400;border-radius:3px;vertical-align:-2px;"></span> 노란색 줄 + <b>NEW</b> = 전날 같은 목록에 없던 저장소</div>
 
+  {% if stale %}
+  <div style="margin-top:14px;padding:12px 14px;background:#fff4e6;border:1px solid #ffc078;border-radius:8px;font-size:13px;color:#8a4b00;">
+    <b>GitHub 트렌딩 목록이 전날과 같습니다.</b> GitHub가 순위를 갱신하지 않은 것으로 보여 새로 등장한 저장소가 없습니다. 스타 수는 최신 값입니다.
+  </div>
+  {% endif %}
   <table role="presentation" style="width:100%;border-collapse:separate;border-spacing:8px 0;margin:16px -8px 0;"><tr>
     {% if week_list %}{{ stat("📈 WEEK 1위", week_list[0].full_name, "+" ~ (week_list[0].gain | num) ~ " ★ / 7일", "#1c7ed6") }}{% endif %}
     {% if today_list %}{{ stat("🔥 TODAY 1위", today_list[0].full_name, "+" ~ (today_list[0].gain | num) ~ " ★ / 24시간", "#e8590c") }}{% endif %}

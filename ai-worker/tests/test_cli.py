@@ -61,3 +61,9 @@ def test_mail_subject_counts_new_in_week_and_today(fakes, fake_llm, monkeypatch,
     fakes["lists"]["monthly"].append(("acme/monthonly", 99, 10))
     mail = _run_cli(monkeypatch, tmp_path, DAY2)
     assert mail["subject"] == "[Github 트렌딩] 2026-11-06 · 신규 1개"
+
+
+def test_subject_says_list_not_updated_when_stale():
+    assert cli.subject({"date": "2026-11-25", "new_count": 0, "stale": True}) == \
+        "[Github 트렌딩] 2026-11-25 · GitHub 목록 갱신 없음"
+    assert cli.subject({"date": "2026-11-25", "new_count": 3}) == "[Github 트렌딩] 2026-11-25 · 신규 3개"

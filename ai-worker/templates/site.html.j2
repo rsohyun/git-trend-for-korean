@@ -55,6 +55,7 @@ main { padding: 28px 0 64px; }
 .daynav span { color: var(--muted); opacity: .45; }
 .source { margin: 10px 0 0; color: var(--muted); font-size: 13px; }
 .source b { color: var(--ink); font-weight: 600; }
+.stale { margin: 10px 0 0; padding: 10px 12px; border-radius: 8px; background: color-mix(in srgb, var(--new-mark) 18%, transparent); font-size: 13px; }
 .insight { margin: 22px 0 6px; background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 16px 18px; }
 .insight .top { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; flex-wrap: wrap; }
 .insight h2 { margin: 0; font-size: 13px; color: var(--week); }
@@ -299,6 +300,7 @@ function renderDay(date) {
       <div class="daynav">${nav(days[i - 1], "◀ 이전 날", "이전 날")}${nav(days[i + 1], "다음 날 ▶", "다음 날")}${date !== latest ? `<a href="#/">오늘로</a>` : ""}</div>
     </div>
     <p class="source">GitHub 트렌딩 수집 ${esc(when(D.days[date].collected_at))} (KST)</p>
+    ${D.days[date].stale ? '<p class="stale" role="note">GitHub 트렌딩 목록이 전날과 같습니다. GitHub가 순위를 갱신하지 않은 것으로 보입니다.</p>' : ""}
     ${insightHtml(D.days[date].insight)}
     <nav class="strip" aria-label="날짜 선택">${days.map(d => {
       const n = newCount(d), a = n ? .15 + .85 * n / maxNew : 0;

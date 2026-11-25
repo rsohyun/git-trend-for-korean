@@ -22,6 +22,8 @@ from app.trending import get_trending_client
 
 
 def subject(result: dict) -> str:
+    if result.get("stale"):
+        return f"[Github 트렌딩] {result['date']} · GitHub 목록 갱신 없음"
     return f"[Github 트렌딩] {result['date']} · 신규 {result['new_count']}개"
 
 
