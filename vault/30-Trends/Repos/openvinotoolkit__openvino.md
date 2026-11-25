@@ -2,13 +2,13 @@
 repo: openvinotoolkit/openvino
 url: https://github.com/openvinotoolkit/openvino
 language: C++
-stars: 12336
+stars: 12500
 summary: "다양한 딥러닝 모델의 연산 속도를 최적화하고 CPU, GPU, NPU 등 여러 하드웨어에서 실행할 수 있게 해 주는 AI 배포 도구입니다."
 main_category: "개발자 도구"
 categories: ["개발자 도구", "머신러닝", "기기 유틸"]
 first_seen: 2026-11-19
-last_seen: 2026-11-24
-appearances: 6
+last_seen: 2026-11-25
+appearances: 7
 tags: [ai-trend, repo]
 ---
 # openvinotoolkit/openvino
@@ -36,3 +36,4 @@ tags: [ai-trend, repo]
 | 2026-11-22 | 8위 (+200) | – | – | 11,948 |
 | 2026-11-23 | 8위 (+158) | – | – | 12,115 |
 | 2026-11-24 | 8위 (+184) | – | – | 12,336 |
+| 2026-11-25 | 8위 (+185) | – | – | 12,500 |

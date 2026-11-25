@@ -2,13 +2,13 @@
 repo: yetone/magpie
 url: https://github.com/yetone/magpie
 language: 
-stars: 40692
+stars: 41148
 summary: "다양한 인공지능 에이전트와 모델을 하나의 메뉴 바 앱과 로컬 게이트웨이로 통합하여 자유롭게 연결하는 프로그램입니다."
 main_category: "개발자 도구"
 categories: ["개발자 도구", "로컬 AI", "기기 유틸"]
 first_seen: 2026-11-24
-last_seen: 2026-11-24
-appearances: 1
+last_seen: 2026-11-25
+appearances: 2
 tags: [ai-trend, repo]
 ---
 # yetone/magpie
@@ -31,3 +31,4 @@ tags: [ai-trend, repo]
 | 날짜 | Today | Week | Month | ★ |
 |---|---|---|---|---|
 | 2026-11-24 | – | – | 10위 (+20,747) | 40,692 |
+| 2026-11-25 | – | – | 11위 (+20,773) | 41,148 |

@@ -2,13 +2,13 @@
 repo: Ebony-Vinyl/dsh-our-free-model
 url: https://github.com/Ebony-Vinyl/dsh-our-free-model
 language: JavaScript
-stars: 58688
+stars: 86354
 summary: "dsh 플러그인을 설치하면 로그인·API 키 없이 DeepSeek V4.1 Flash, Kimi K3 등 최신 모델을 무료로 사용할 수 있습니다."
 main_category: "AI 모델 플러그인"
 categories: ["AI 모델 플러그인", "개발자 도구", "로컬 AI"]
-first_seen: 
-last_seen: 
-appearances: 0
+first_seen: 2026-11-25
+last_seen: 2026-11-25
+appearances: 1
 tags: [ai-trend, repo]
 ---
 # Ebony-Vinyl/dsh-our-free-model
@@ -34,3 +34,4 @@ tags: [ai-trend, repo]
 ## 등장 기록
 | 날짜 | Today | Week | Month | ★ |
 |---|---|---|---|---|
+| 2026-11-25 | – | – | 9위 (+48,193) | 86,354 |
