@@ -2,13 +2,13 @@
 repo: alibaba/open-code-review
 url: https://github.com/alibaba/open-code-review
 language: Go
-stars: 56111
+stars: 56414
 summary: "알리바바 그룹에서 검증된 대규모 코드 리뷰 도구로, AI와 규칙 기반 파이프라인을 결합해 정확한 코드 결함을 찾아 줍니다."
 main_category: "개발자 도구"
 categories: ["개발자 도구", "AI 에이전트", "코드 품질 관리"]
 first_seen: 2026-11-14
-last_seen: 2026-11-25
-appearances: 12
+last_seen: 2026-11-26
+appearances: 13
 tags: [ai-trend, repo]
 ---
 # alibaba/open-code-review
@@ -42,3 +42,4 @@ tags: [ai-trend, repo]
 | 2026-11-23 | – | 4위 (+3,700) | – | 55,451 |
 | 2026-11-24 | – | 4위 (+3,015) | – | 55,836 |
 | 2026-11-25 | – | 4위 (+2,638) | – | 56,111 |
+| 2026-11-26 | – | 5위 (+2,259) | – | 56,414 |

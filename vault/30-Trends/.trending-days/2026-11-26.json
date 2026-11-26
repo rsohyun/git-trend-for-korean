@@ -1,0 +1,880 @@
+{
+ "date": "2026-11-26",
+ "collected_at": "2026-11-26T13:51+09:00",
+ "stale": false,
+ "repos": {
+  "daily": [
+   {
+    "name": "elementalsouls/Claude-BugHunter",
+    "rank": 1,
+    "gain": 1652,
+    "stars": 23254,
+    "language": "Python",
+    "is_new": false,
+    "summary": "Claude Code에 버그 사냥과 외부 모의 해킹(Red-team) 전문 지식을 추가해 주는 도구 모음입니다.",
+    "categories": [
+     "보안",
+     "개발자 도구",
+     "AI 에이전트"
+    ]
+   },
+   {
+    "name": "obra/superpowers",
+    "rank": 2,
+    "gain": 903,
+    "stars": 326766,
+    "language": "Shell",
+    "is_new": false,
+    "summary": "AI 코딩 도구가 무작정 코드를 작성하는 대신, 철저한 설계와 계획을 거쳐 자율적으로 개발을 진행하도록 돕는 프레임워크입니다.",
+    "categories": [
+     "AI 에이전트",
+     "개발자 도구"
+    ]
+   },
+   {
+    "name": "HKUDS/CLI-Anything",
+    "rank": 3,
+    "gain": 1106,
+    "stars": 65816,
+    "language": "Python",
+    "is_new": false,
+    "summary": "다양한 소프트웨어를 AI 에이전트가 명령줄 인터페이스(CLI)를 통해 직접 다룰 수 있도록 변환해 주는 도구입니다.",
+    "categories": [
+     "AI 에이전트",
+     "개발자 도구",
+     "유틸리티"
+    ]
+   },
+   {
+    "name": "jingyaogong/minimind",
+    "rank": 4,
+    "gain": 826,
+    "stars": 71137,
+    "language": "Python",
+    "is_new": false,
+    "summary": "대규모 언어 모델을 처음부터 직접 만들고 학습해 볼 수 있는 64M 파라미터 크기의 초소형 인공지능 학습 프로젝트입니다.",
+    "categories": [
+     "AI 에이전트",
+     "로컬 AI",
+     "개발자 도구"
+    ]
+   },
+   {
+    "name": "cursor/plugins",
+    "rank": 5,
+    "gain": 416,
+    "stars": 19587,
+    "language": "TypeScript",
+    "is_new": false,
+    "summary": "Cursor 에디터에서 활용할 수 있는 공식 플러그인과 사양을 모아둔 저장소입니다.",
+    "categories": [
+     "개발자 도구",
+     "AI 에이전트",
+     "생산성"
+    ]
+   },
+   {
+    "name": "firecrawl/firecrawl",
+    "rank": 6,
+    "gain": 1135,
+    "stars": 210212,
+    "language": "TypeScript",
+    "is_new": false,
+    "summary": "웹사이트를 AI가 읽기 쉬운 마크다운이나 구조화된 데이터로 바꿔 주고, AI 에이전트와 연동할 수 있게 해 주는 지식 인프라 도구입니다.",
+    "categories": [
+     "AI 에이전트",
+     "개발자 도구",
+     "웹 크롤러"
+    ]
+   },
+   {
+    "name": "nginx/nginx",
+    "rank": 7,
+    "gain": 176,
+    "stars": 33403,
+    "language": "C",
+    "is_new": false,
+    "summary": "웹 서버, 부하 분산기(로드 밸런서), 리버스 프록시 등으로 사용할 수 있는 오픈소스 프로그램입니다.",
+    "categories": [
+     "웹 서버",
+     "개발자 도구",
+     "인프라"
+    ]
+   },
+   {
+    "name": "openvinotoolkit/openvino",
+    "rank": 8,
+    "gain": 191,
+    "stars": 12687,
+    "language": "C++",
+    "is_new": false,
+    "summary": "다양한 딥러닝 모델의 연산 속도를 최적화하고 CPU, GPU, NPU 등 여러 하드웨어에서 실행할 수 있게 해 주는 AI 배포 도구입니다.",
+    "categories": [
+     "개발자 도구",
+     "머신러닝",
+     "기기 유틸"
+    ]
+   },
+   {
+    "name": "cathrynlavery/diagram-design",
+    "rank": 9,
+    "gain": 1141,
+    "stars": 73211,
+    "language": "HTML",
+    "is_new": false,
+    "summary": "AI 코딩 도구에서 깔끔하고 세련된 HTML·SVG 형식의 다이어그램을 자동으로 그려주는 에이전트 스킬입니다.",
+    "categories": [
+     "AI 에이전트",
+     "개발자 도구",
+     "디자인 도구"
+    ]
+   },
+   {
+    "name": "mvanhorn/last30days-skill",
+    "rank": 10,
+    "gain": 945,
+    "stars": 75236,
+    "language": "Python",
+    "is_new": false,
+    "summary": "AI 에이전트를 이용해 레딧, 엑스(X), 유튜브, 해커뉴스 등 여러 플랫폼의 최신 정보를 동시에 검색하고 요약해 주는 검색 도구입니다.",
+    "categories": [
+     "AI 에이전트",
+     "개발자 도구",
+     "정보 검색"
+    ]
+   },
+   {
+    "name": "google-labs-code/stitch-skills",
+    "rank": 11,
+    "gain": 355,
+    "stars": 13037,
+    "language": "TypeScript",
+    "is_new": false,
+    "summary": "Google Stitch 환경에서 코딩 에이전트가 디자인 작업과 코드 생성을 수행할 수 있도록 돕는 에이전트 스킬 모음입니다.",
+    "categories": [
+     "AI 에이전트",
+     "개발자 도구",
+     "디자인"
+    ]
+   },
+   {
+    "name": "mjmirza/app-store-compliance",
+    "rank": 12,
+    "gain": 858,
+    "stars": 6590,
+    "language": "Shell",
+    "is_new": false,
+    "summary": "앱스토어와 구글 플레이의 앱 심사 반려를 미리 막아 주는 검사 도구이자 대응 지침서입니다.",
+    "categories": [
+     "개발자 도구",
+     "모바일 앱",
+     "보안"
+    ]
+   },
+   {
+    "name": "Tracer-Cloud/opensre",
+    "rank": 13,
+    "gain": 348,
+    "stars": 15582,
+    "language": "Python",
+    "is_new": false,
+    "summary": "실패한 CI/CD 빌드의 원인을 분석하고 해결책을 찾아 수정안을 만들어 주는 오픈소스 CLI 에이전트입니다.",
+    "categories": [
+     "개발자 도구",
+     "CI/CD",
+     "AI 에이전트"
+    ]
+   },
+   {
+    "name": "toeverything/AFFiNE",
+    "rank": 14,
+    "gain": 574,
+    "stars": 78590,
+    "language": "TypeScript",
+    "is_new": false,
+    "summary": "문서 작성, 백서, 일정 관리, 시각적 화이트보드 기능을 하나로 합친 오픈소스 지식 관리 도구입니다.",
+    "categories": [
+     "생산성",
+     "지식 관리",
+     "개발자 도구"
+    ]
+   },
+   {
+    "name": "XiaoYouChR/Ghost-Downloader-3",
+    "rank": 15,
+    "gain": 951,
+    "stars": 18415,
+    "language": "Python",
+    "is_new": false,
+    "summary": "다양한 프로토콜과 웹사이트의 파일을 안정적으로 내려받을 수 있는 통합 다운로더입니다.",
+    "categories": [
+     "개발자 도구",
+     "기기 유틸"
+    ]
+   },
+   {
+    "name": "zhouxiaoka/autoclip",
+    "rank": 16,
+    "gain": 880,
+    "stars": 16336,
+    "language": "Python",
+    "is_new": false,
+    "summary": "긴 영상을 입력하면 AI가 자동으로 숏폼 영상, 자막, 썸네일, 홍보 문구를 만들어 주는 오픈소스 데스크톱 도구입니다.",
+    "categories": [
+     "AI 에이전트",
+     "기기 유틸",
+     "개발자 도구"
+    ]
+   }
+  ],
+  "weekly": [
+   {
+    "name": "backnotprop/plannotator",
+    "rank": 1,
+    "gain": 1764,
+    "stars": 15115,
+    "language": "TypeScript",
+    "is_new": false,
+    "summary": "AI 코딩 에이전트가 만든 계획, 문서, 코드 변경 사항을 브라우저에서 직접 검토하고 피드백을 보낼 수 있는 로컬 리뷰 도구입니다.",
+    "categories": [
+     "AI 에이전트",
+     "개발자 도구",
+     "코드 리뷰"
+    ]
+   },
+   {
+    "name": "google-labs-code/stitch-skills",
+    "rank": 2,
+    "gain": 2616,
+    "stars": 13037,
+    "language": "TypeScript",
+    "is_new": false,
+    "summary": "Google Stitch 환경에서 코딩 에이전트가 디자인 작업과 코드 생성을 수행할 수 있도록 돕는 에이전트 스킬 모음입니다.",
+    "categories": [
+     "AI 에이전트",
+     "개발자 도구",
+     "디자인"
+    ]
+   },
+   {
+    "name": "GoogleChrome/modern-web-guidance-src",
+    "rank": 3,
+    "gain": 2309,
+    "stars": 11089,
+    "language": "TypeScript",
+    "is_new": false,
+    "summary": "코딩 에이전트가 구형 웹 기술 대신 최신 표준 웹 기술과 브라우저 기능을 사용하도록 안내하는 개발 도구입니다.",
+    "categories": [
+     "AI 에이전트",
+     "개발자 도구",
+     "웹 개발"
+    ]
+   },
+   {
+    "name": "n8n-io/nod",
+    "rank": 4,
+    "gain": 1008,
+    "stars": 3619,
+    "language": "TypeScript",
+    "is_new": true,
+    "summary": "사용자의 컴퓨터에서 직접 실행되며 이메일 확인, 웹 서핑, 일정 관리 등의 반복 업무를 대신 처리해 주는 오픈소스 개인 AI 비서입니다.",
+    "categories": [
+     "AI 에이전트",
+     "생산성",
+     "기기 유틸"
+    ]
+   },
+   {
+    "name": "alibaba/open-code-review",
+    "rank": 5,
+    "gain": 2259,
+    "stars": 56414,
+    "language": "Go",
+    "is_new": false,
+    "summary": "알리바바 그룹에서 검증된 대규모 코드 리뷰 도구로, AI와 규칙 기반 파이프라인을 결합해 정확한 코드 결함을 찾아 줍니다.",
+    "categories": [
+     "개발자 도구",
+     "AI 에이전트",
+     "코드 품질 관리"
+    ]
+   },
+   {
+    "name": "mvanhorn/last30days-skill",
+    "rank": 6,
+    "gain": 5302,
+    "stars": 75236,
+    "language": "Python",
+    "is_new": false,
+    "summary": "AI 에이전트를 이용해 레딧, 엑스(X), 유튜브, 해커뉴스 등 여러 플랫폼의 최신 정보를 동시에 검색하고 요약해 주는 검색 도구입니다.",
+    "categories": [
+     "AI 에이전트",
+     "개발자 도구",
+     "정보 검색"
+    ]
+   },
+   {
+    "name": "ChromeDevTools/chrome-devtools-mcp",
+    "rank": 7,
+    "gain": 1203,
+    "stars": 59387,
+    "language": "TypeScript",
+    "is_new": false,
+    "summary": "AI 코딩 에이전트가 크롬 브라우저를 직접 조작하고 검사할 수 있게 해 주는 도구입니다.",
+    "categories": [
+     "AI 에이전트",
+     "개발자 도구",
+     "웹 자동화"
+    ]
+   },
+   {
+    "name": "tradermonty/claude-trading-skills",
+    "rank": 8,
+    "gain": 1422,
+    "stars": 8480,
+    "language": "Python",
+    "is_new": false,
+    "summary": "시간이 부족한 개인 투자자가 AI를 활용해 시장 분석, 위험 관리, 매매 일지 작성 등 투자 의사결정 과정을 체계적으로 관리할 수 있게 해 주는 도구 모음입니다.",
+    "categories": [
+     "개발자 도구",
+     "금융",
+     "AI 에이전트"
+    ]
+   },
+   {
+    "name": "ag-ui-protocol/ag-ui",
+    "rank": 9,
+    "gain": 1421,
+    "stars": 21750,
+    "language": "TypeScript",
+    "is_new": false,
+    "summary": "AI 에이전트와 사용자 인터페이스를 쉽게 연결할 수 있게 해 주는 표준 프로토콜입니다.",
+    "categories": [
+     "AI 에이전트",
+     "개발자 도구"
+    ]
+   },
+   {
+    "name": "meta/astryx",
+    "rank": 10,
+    "gain": 2635,
+    "stars": 33176,
+    "language": "TypeScript",
+    "is_new": false,
+    "summary": "사람과 AI 어시스턴트가 함께 웹 애플리케이션을 만들 수 있도록 지원하는 오픈소스 디자인 시스템입니다.",
+    "categories": [
+     "개발자 도구",
+     "디자인 시스템",
+     "UI 컴포넌트"
+    ]
+   },
+   {
+    "name": "pookjw/HermesEnabler",
+    "rank": 11,
+    "gain": 318,
+    "stars": 2524,
+    "language": "Objective-C",
+    "is_new": false,
+    "summary": "모든 애플워치(Apple Watch) 기기에서 에르메스(Hermès) 전용 시계 페이스를 쓸 수 있게 해 주는 프로그램입니다.",
+    "categories": [
+     "기기 유틸",
+     "개인화",
+     "애플워치"
+    ]
+   },
+   {
+    "name": "we-promise/sure",
+    "rank": 12,
+    "gain": 1509,
+    "stars": 17957,
+    "language": "Ruby",
+    "is_new": false,
+    "summary": "자신의 자산과 현금 흐름을 한눈에 관리하고 AI 비서와 상담할 수 있는 개인 자산 관리 프로그램입니다.",
+    "categories": [
+     "기기 유틸",
+     "개발자 도구"
+    ]
+   },
+   {
+    "name": "dream-num/univer",
+    "rank": 13,
+    "gain": 2319,
+    "stars": 31881,
+    "language": "TypeScript",
+    "is_new": false,
+    "summary": "스프레드시트와 문서 편집 기능을 웹 제품에 직접 넣을 수 있게 해 주는 오픈소스 오피스 SDK입니다.",
+    "categories": [
+     "개발자 도구",
+     "오피스",
+     "문서 편집"
+    ]
+   },
+   {
+    "name": "kajisho5/ffmpeg-skill",
+    "rank": 14,
+    "gain": 3048,
+    "stars": 11186,
+    "language": "Python",
+    "is_new": false,
+    "summary": "AI 코딩 에이전트가 로컬에서 안전하게 동영상을 편집하고 검증할 수 있게 해 주는 42가지 FFmpeg 도구 모음입니다.",
+    "categories": [
+     "AI 에이전트",
+     "개발자 도구",
+     "멀티미디어"
+    ]
+   }
+  ],
+  "monthly": [
+   {
+    "name": "Nutlope/hallmark",
+    "rank": 1,
+    "gain": 28295,
+    "stars": 61195,
+    "language": "CSS",
+    "is_new": false,
+    "summary": "Hallmark는 Claude Code, Codex, Cursor 등 AI 코딩 에이전트용 디자인 스킬로, AI가 만든 흔적을 제거하고 깔끔한 웹 페이지를 자동 생성합니다.",
+    "categories": [
+     "AI 에이전트",
+     "디자인 자동화",
+     "개발자 도구"
+    ]
+   },
+   {
+    "name": "cloudflare/security-audit-skill",
+    "rank": 2,
+    "gain": 32663,
+    "stars": 78432,
+    "language": "JavaScript",
+    "is_new": false,
+    "summary": "코딩 에이전트를 보안 감사 도구로 전환해, 다단계 검증과 기계 판독 가능한 결과를 제공하는 스킬입니다.",
+    "categories": [
+     "보안",
+     "AI 에이전트",
+     "개발자 도구"
+    ]
+   },
+   {
+    "name": "milind-soni/OpenMausBot",
+    "rank": 3,
+    "gain": 22391,
+    "stars": 27895,
+    "language": "TypeScript",
+    "is_new": false,
+    "summary": "채팅 앱 형태로 여러 인공지능 봇과 대화하며 작업을 맡길 수 있는 오픈소스 프로그램입니다.",
+    "categories": [
+     "AI 에이전트",
+     "개발자 도구",
+     "기기 유틸"
+    ]
+   },
+   {
+    "name": "pingdotgg/t3code",
+    "rank": 4,
+    "gain": 49283,
+    "stars": 79761,
+    "language": "TypeScript",
+    "is_new": false,
+    "summary": "T3 Code는 로컬에 설치된 다양한 코딩 AI 에이전트를 모바일·웹·데스크톱 앱으로 제어할 수 있게 해 주는 도구입니다.",
+    "categories": [
+     "개발자 도구",
+     "AI 에이전트",
+     "원격 제어"
+    ]
+   },
+   {
+    "name": "anthropics/skills",
+    "rank": 5,
+    "gain": 17272,
+    "stars": 200617,
+    "language": "Python",
+    "is_new": false,
+    "summary": "인공지능(AI) 모델인 클로드(Claude)가 특정 작업을 더 잘 수행하도록 안내하는 지침과 스크립트 모음입니다.",
+    "categories": [
+     "AI 에이전트",
+     "개발자 도구",
+     "생산성"
+    ]
+   },
+   {
+    "name": "thedotmack/claude-mem",
+    "rank": 6,
+    "gain": 17424,
+    "stars": 119811,
+    "language": "TypeScript",
+    "is_new": false,
+    "summary": "Claude-Mem은 AI 에이전트가 세션을 종료해도 작업 기록을 자동으로 저장·압축·재활용해 지속적인 컨텍스트를 제공하는 도구입니다.",
+    "categories": [
+     "AI 에이전트",
+     "개발자 도구",
+     "클라우드 서비스"
+    ]
+   },
+   {
+    "name": "Jakeschincariol/instagram-agent-skill",
+    "rank": 7,
+    "gain": 6421,
+    "stars": 9358,
+    "language": "Python",
+    "is_new": false,
+    "summary": "Claude에 추가해 인스타그램 계정 운영을 자동화하는 13가지 스킬 모음입니다.",
+    "categories": [
+     "AI 에이전트",
+     "개발자 도구",
+     "마케팅"
+    ]
+   },
+   {
+    "name": "backnotprop/plannotator",
+    "rank": 8,
+    "gain": 5475,
+    "stars": 15115,
+    "language": "TypeScript",
+    "is_new": false,
+    "summary": "AI 코딩 에이전트가 만든 계획, 문서, 코드 변경 사항을 브라우저에서 직접 검토하고 피드백을 보낼 수 있는 로컬 리뷰 도구입니다.",
+    "categories": [
+     "AI 에이전트",
+     "개발자 도구",
+     "코드 리뷰"
+    ]
+   },
+   {
+    "name": "Ebony-Vinyl/dsh-our-free-model",
+    "rank": 9,
+    "gain": 47629,
+    "stars": 87333,
+    "language": "JavaScript",
+    "is_new": false,
+    "summary": "dsh 플러그인을 설치하면 로그인·API 키 없이 DeepSeek V4.1 Flash, Kimi K3 등 최신 모델을 무료로 사용할 수 있습니다.",
+    "categories": [
+     "AI 모델 플러그인",
+     "개발자 도구",
+     "로컬 AI"
+    ]
+   },
+   {
+    "name": "HKUDS/DeepTutor",
+    "rank": 10,
+    "gain": 20351,
+    "stars": 62841,
+    "language": "Python",
+    "is_new": false,
+    "summary": "DeepTutor는 개인 맞춤형 평생 학습을 제공하는 AI 기반 튜터링 플랫폼입니다.",
+    "categories": [
+     "AI 에이전트",
+     "교육",
+     "개발자 도구"
+    ]
+   },
+   {
+    "name": "yetone/magpie",
+    "rank": 11,
+    "gain": 20593,
+    "stars": 41606,
+    "language": "Go",
+    "is_new": false,
+    "summary": "다양한 인공지능 에이전트와 모델을 하나의 메뉴 바 앱과 로컬 게이트웨이로 통합하여 자유롭게 연결하는 프로그램입니다.",
+    "categories": [
+     "개발자 도구",
+     "로컬 AI",
+     "기기 유틸"
+    ]
+   },
+   {
+    "name": "pbakaus/impeccable",
+    "rank": 12,
+    "gain": 30151,
+    "stars": 117008,
+    "language": "Rust",
+    "is_new": false,
+    "summary": "Impeccable은 코딩 에이전트용 디자인 어휘 체계로, 디자인을 조정·검토하고 AI가 만든 UI의 품질 문제를 사전에 탐지합니다.",
+    "categories": [
+     "개발자 도구",
+     "AI 에이전트",
+     "디자인 툴"
+    ]
+   },
+   {
+    "name": "sherlock-project/sherlock",
+    "rank": 13,
+    "gain": 22950,
+    "stars": 117660,
+    "language": "Python",
+    "is_new": false,
+    "summary": "특정 사용자 이름으로 400개가 넘는 소셜 미디어 플랫폼에서 계정 존재 여부를 한 번에 찾아 주는 도구입니다.",
+    "categories": [
+     "보안",
+     "기기 유틸",
+     "개발자 도구"
+    ]
+   },
+   {
+    "name": "AgriciDaniel/claude-seo",
+    "rank": 14,
+    "gain": 12180,
+    "stars": 32460,
+    "language": "Python",
+    "is_new": false,
+    "summary": "클로드 코드(Claude Code)에서 웹사이트의 검색엔진 최적화(SEO) 상태를 진단하고 개선 계획을 세워 주는 오픈소스 플러그인입니다.",
+    "categories": [
+     "개발자 도구",
+     "AI 에이전트"
+    ]
+   },
+   {
+    "name": "google-labs-code/stitch-skills",
+    "rank": 15,
+    "gain": 4344,
+    "stars": 13037,
+    "language": "TypeScript",
+    "is_new": false,
+    "summary": "Google Stitch 환경에서 코딩 에이전트가 디자인 작업과 코드 생성을 수행할 수 있도록 돕는 에이전트 스킬 모음입니다.",
+    "categories": [
+     "AI 에이전트",
+     "개발자 도구",
+     "디자인"
+    ]
+   },
+   {
+    "name": "heygen-com/hyperframes",
+    "rank": 16,
+    "gain": 18511,
+    "stars": 90272,
+    "language": "TypeScript",
+    "is_new": false,
+    "summary": "HTML과 CSS로 작성한 콘텐츠와 애니메이션을 고화질 MP4 동영상으로 변환해 주는 오픈소스 프레임워크입니다.",
+    "categories": [
+     "개발자 도구",
+     "AI 에이전트",
+     "기기 유틸"
+    ]
+   },
+   {
+    "name": "elementalsouls/Claude-BugHunter",
+    "rank": 17,
+    "gain": 17223,
+    "stars": 23254,
+    "language": "Python",
+    "is_new": false,
+    "summary": "Claude Code에 버그 사냥과 외부 모의 해킹(Red-team) 전문 지식을 추가해 주는 도구 모음입니다.",
+    "categories": [
+     "보안",
+     "개발자 도구",
+     "AI 에이전트"
+    ]
+   },
+   {
+    "name": "kajisho5/ffmpeg-skill",
+    "rank": 18,
+    "gain": 8284,
+    "stars": 11186,
+    "language": "Python",
+    "is_new": false,
+    "summary": "AI 코딩 에이전트가 로컬에서 안전하게 동영상을 편집하고 검증할 수 있게 해 주는 42가지 FFmpeg 도구 모음입니다.",
+    "categories": [
+     "AI 에이전트",
+     "개발자 도구",
+     "멀티미디어"
+    ]
+   },
+   {
+    "name": "vercel-labs/agent-browser",
+    "rank": 19,
+    "gain": 9541,
+    "stars": 54010,
+    "language": "Rust",
+    "is_new": false,
+    "summary": "AI 에이전트가 셸 명령어로 웹 브라우저를 조작하여 페이지를 읽고 행동할 수 있게 해 주는 브라우저 자동화 도구입니다.",
+    "categories": [
+     "AI 에이전트",
+     "개발자 도구",
+     "웹 자동화"
+    ]
+   }
+  ]
+ },
+ "developers": {
+  "weekly": [
+   {
+    "login": "ccch1mneyyy",
+    "name": "Chimney",
+    "rank": 1,
+    "avatar": "https://avatars.githubusercontent.com/u/268149062?s=96&v=4",
+    "repo": "ccch1mneyyy/dsh-Go",
+    "repo_summary": "Android 기기에서 DeepSeek Harness를 실행하고, 로컬 엔진 또는 원격 PC를 제어할 수 있게 해 주는 앱입니다.",
+    "is_new": false
+   },
+   {
+    "login": "mvanhorn",
+    "name": "Matt Van Horn",
+    "rank": 2,
+    "avatar": "https://avatars.githubusercontent.com/u/455140?s=96&v=4",
+    "repo": "mvanhorn/last30days-skill",
+    "repo_summary": "AI 에이전트를 이용해 레딧, 엑스(X), 유튜브, 해커뉴스 등 여러 플랫폼의 최신 정보를 동시에 검색하고 요약해 주는 검색 도구입니다.",
+    "is_new": false
+   },
+   {
+    "login": "andrewnakas",
+    "name": "Andrew Nakas",
+    "rank": 3,
+    "avatar": "https://avatars.githubusercontent.com/u/7544678?s=96&v=4",
+    "repo": "andrewnakas/gtav-recomp",
+    "repo_summary": "GTA V의 Xbox 360 버전을 PC, 맥, 스마트폰에서 네이티브로 실행할 수 있게 재컴파일해 주는 프로그램입니다.",
+    "is_new": false
+   },
+   {
+    "login": "Gaurav-Gosain",
+    "name": "Gaurav Gosain",
+    "rank": 4,
+    "avatar": "https://avatars.githubusercontent.com/u/55647468?s=96&v=4",
+    "repo": "Gaurav-Gosain/tuios",
+    "repo_summary": "터미널 화면을 여러 개로 나누고 AI 코딩 에이전트의 상태를 한눈에 관리할 수 있게 해 주는 터미널 창 관리자입니다.",
+    "is_new": false
+   },
+   {
+    "login": "aalises",
+    "name": "Albert Alises",
+    "rank": 5,
+    "avatar": "https://avatars.githubusercontent.com/u/11021461?s=96&v=4",
+    "repo": "aalises/claude-code-config",
+    "repo_summary": "Claude Code 도구를 확장하여 다중 AI 에이전트 토론, 세션 맥락 관리, 코드 검증 기능을 제공하는 개인용 설정 모음입니다.",
+    "is_new": false
+   },
+   {
+    "login": "davideast",
+    "name": "David East",
+    "rank": 6,
+    "avatar": "https://avatars.githubusercontent.com/u/4570265?s=96&v=4",
+    "repo": "davideast/stitch-mcp",
+    "repo_summary": "구글 스티치(Stitch) 플랫폼에서 생성된 AI UI 디자인을 로컬 개발 환경으로 가져와 미리 보거나 웹사이트를 구축하고, AI 코딩 도구와 연동할 수 있게 해 주는 명령줄 도구입니다.",
+    "is_new": false
+   },
+   {
+    "login": "firsttris",
+    "name": "Tristan Teufel",
+    "rank": 7,
+    "avatar": "https://avatars.githubusercontent.com/u/1709260?s=96&v=4",
+    "repo": "firsttris/plugin.video.sendtokodi",
+    "repo_summary": "유튜브나 트위치 같은 1,000개 이상의 웹사이트 영상 링크를 브라우저나 스마트폰에서 Kodi 미디어 센터로 바로 보내 재생할 수 있는 확장 프로그램입니다.",
+    "is_new": true
+   },
+   {
+    "login": "poteto",
+    "name": "lauren",
+    "rank": 8,
+    "avatar": "https://avatars.githubusercontent.com/u/1390709?s=96&v=4",
+    "repo": "poteto/hiring-without-whiteboards",
+    "repo_summary": "화이트보드 코딩 테스트 대신 실무 중심의 면접을 진행하는 기업 목록을 모아 둔 저장소입니다.",
+    "is_new": false
+   },
+   {
+    "login": "jxxghp",
+    "name": "jxxghp",
+    "rank": 9,
+    "avatar": "https://avatars.githubusercontent.com/u/51039935?s=96&v=4",
+    "repo": "jxxghp/MoviePilot",
+    "repo_summary": "개인 미디어 서버의 영화와 드라마를 자동으로 검색하고 내려받아 정리해 주는 NAS(네트워크 결합 스토리지) 관리 프로그램입니다.",
+    "is_new": true
+   },
+   {
+    "login": "t8y2",
+    "name": "t8y2",
+    "rank": 10,
+    "avatar": "https://avatars.githubusercontent.com/u/77960507?s=96&v=4",
+    "repo": "t8y2/dbx",
+    "repo_summary": "100개가 넘는 데이터베이스를 25MB의 가벼운 용량으로 관리하고 인공지능과 연동할 수 있는 통합 데이터베이스 클라이언트입니다.",
+    "is_new": true
+   }
+  ],
+  "monthly": [
+   {
+    "login": "yetone",
+    "name": "yetone",
+    "rank": 1,
+    "avatar": "https://avatars.githubusercontent.com/u/1206493?s=96&v=4",
+    "repo": "yetone/magpie",
+    "repo_summary": "다양한 인공지능 에이전트와 모델을 하나의 메뉴 바 앱과 로컬 게이트웨이로 통합하여 자유롭게 연결하는 프로그램입니다.",
+    "is_new": false
+   },
+   {
+    "login": "morluto",
+    "name": "morluto",
+    "rank": 2,
+    "avatar": "https://avatars.githubusercontent.com/u/76467478?s=96&v=4",
+    "repo": "morluto/rea",
+    "repo_summary": "AI 에이전트를 통해 앱, 바이너리, 웹 등 모든 소프트웨어를 역공학하고 동작을 분석할 수 있게 해 주는 도구입니다.",
+    "is_new": false
+   },
+   {
+    "login": "ranxianglei",
+    "name": "ranxianglei",
+    "rank": 3,
+    "avatar": "https://avatars.githubusercontent.com/u/12445698?s=96&v=4",
+    "repo": "ranxianglei/billion-context",
+    "repo_summary": "AI 대화 도구의 입력 데이터 양을 대폭 줄여 주어, 대화 기록이 길어져도 성능 저하 없이 장기간 한 세션을 유지할 수 있게 해 주는 맥락 압축 플러그인입니다.",
+    "is_new": false
+   },
+   {
+    "login": "Gathin23",
+    "name": "Gathin",
+    "rank": 4,
+    "avatar": "https://avatars.githubusercontent.com/u/94786511?s=96&v=4",
+    "repo": "Gathin23/cleanyourtv",
+    "repo_summary": "Android TV와 Google TV의 광고·불필요 앱을 Wi‑Fi로 제거하고, Apple TV와 같은 깔끔한 홈 화면 런처를 설치해 주는 도구입니다.",
+    "is_new": false
+   },
+   {
+    "login": "poteto",
+    "name": "lauren",
+    "rank": 5,
+    "avatar": "https://avatars.githubusercontent.com/u/1390709?s=96&v=4",
+    "repo": "poteto/hiring-without-whiteboards",
+    "repo_summary": "화이트보드 코딩 테스트 대신 실무 중심의 면접을 진행하는 기업 목록을 모아 둔 저장소입니다.",
+    "is_new": false
+   },
+   {
+    "login": "garrytan",
+    "name": "Garry Tan",
+    "rank": 6,
+    "avatar": "https://avatars.githubusercontent.com/u/19957?s=96&v=4",
+    "repo": "garrytan/gstack",
+    "repo_summary": "Claude Code 등의 AI 코딩 도구를 CEO부터 QA까지 전담 역할 팀으로 만들어 주는 가상 엔지니어링 팀 도구입니다.",
+    "is_new": false
+   },
+   {
+    "login": "WenyuChiou",
+    "name": "Wenyu Chiou",
+    "rank": 7,
+    "avatar": "https://avatars.githubusercontent.com/u/162016108?s=96&v=4",
+    "repo": "WenyuChiou/awesome-agentic-ai-zh",
+    "repo_summary": "AI Agent（AI 代理人）的循序漸進學習地圖與精選資源，帶領讀者從基礎模型概念走到能動手開發或日常運用。",
+    "is_new": false
+   },
+   {
+    "login": "SaladDay",
+    "name": "SaladDay",
+    "rank": 8,
+    "avatar": "https://avatars.githubusercontent.com/u/92240037?s=96&v=4",
+    "repo": "SaladDay/cc-switch-cli",
+    "repo_summary": "Claude Code, Codex, Gemini 등 여러 AI 개발 도구의 계정과 API 제공자를 한눈에 관리하고 손쉽게 전환할 수 있는 크로스플랫폼 도구입니다.",
+    "is_new": false
+   },
+   {
+    "login": "orkunisitmak",
+    "name": "orkunisitmak",
+    "rank": 9,
+    "avatar": "https://avatars.githubusercontent.com/u/68860338?s=96&v=4",
+    "repo": "orkunisitmak/nashi-app",
+    "repo_summary": "파일을 드래그하고 회전 메뉴를 돌려 원하는 형식으로 변환하고 편집할 수 있는 오픈소스 파일 도구입니다.",
+    "is_new": true
+   },
+   {
+    "login": "ccch1mneyyy",
+    "name": "Chimney",
+    "rank": 10,
+    "avatar": "https://avatars.githubusercontent.com/u/268149062?s=96&v=4",
+    "repo": "ccch1mneyyy/dsh-Go",
+    "repo_summary": "Android 기기에서 DeepSeek Harness를 실행하고, 로컬 엔진 또는 원격 PC를 제어할 수 있게 해 주는 앱입니다.",
+    "is_new": true
+   }
+  ]
+ }
+}

@@ -2,13 +2,13 @@
 repo: anthropics/skills
 url: https://github.com/anthropics/skills
 language: Python
-stars: 200082
+stars: 200617
 summary: "인공지능(AI) 모델인 클로드(Claude)가 특정 작업을 더 잘 수행하도록 안내하는 지침과 스크립트 모음입니다."
 main_category: "AI 에이전트"
 categories: ["AI 에이전트", "개발자 도구", "생산성"]
 first_seen: 2026-11-04
-last_seen: 2026-11-25
-appearances: 22
+last_seen: 2026-11-26
+appearances: 23
 tags: [ai-trend, repo]
 ---
 # anthropics/skills
@@ -52,3 +52,4 @@ tags: [ai-trend, repo]
 | 2026-11-23 | – | – | 5위 (+16,473) | 199,076 |
 | 2026-11-24 | – | – | 5위 (+16,727) | 199,597 |
 | 2026-11-25 | – | – | 5위 (+16,946) | 200,082 |
+| 2026-11-26 | – | – | 5위 (+17,272) | 200,617 |

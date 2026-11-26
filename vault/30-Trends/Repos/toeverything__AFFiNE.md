@@ -2,13 +2,13 @@
 repo: toeverything/AFFiNE
 url: https://github.com/toeverything/AFFiNE
 language: TypeScript
-stars: 78089
+stars: 78590
 summary: "문서 작성, 백서, 일정 관리, 시각적 화이트보드 기능을 하나로 합친 오픈소스 지식 관리 도구입니다."
 main_category: "생산성"
 categories: ["생산성", "지식 관리", "개발자 도구"]
 first_seen: 2026-11-20
-last_seen: 2026-11-25
-appearances: 6
+last_seen: 2026-11-26
+appearances: 7
 tags: [ai-trend, repo]
 ---
 # toeverything/AFFiNE
@@ -37,3 +37,4 @@ tags: [ai-trend, repo]
 | 2026-11-23 | 14위 (+542) | – | – | 76,899 |
 | 2026-11-24 | 14위 (+595) | – | – | 77,546 |
 | 2026-11-25 | 14위 (+584) | – | – | 78,089 |
+| 2026-11-26 | 14위 (+574) | – | – | 78,590 |

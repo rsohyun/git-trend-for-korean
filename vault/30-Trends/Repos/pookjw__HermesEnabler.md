@@ -2,13 +2,13 @@
 repo: pookjw/HermesEnabler
 url: https://github.com/pookjw/HermesEnabler
 language: Objective-C
-stars: 2496
+stars: 2524
 summary: "모든 애플워치(Apple Watch) 기기에서 에르메스(Hermès) 전용 시계 페이스를 쓸 수 있게 해 주는 프로그램입니다."
 main_category: "기기 유틸"
 categories: ["기기 유틸", "개인화", "애플워치"]
 first_seen: 2026-11-13
-last_seen: 2026-11-25
-appearances: 7
+last_seen: 2026-11-26
+appearances: 8
 tags: [ai-trend, repo]
 ---
 # pookjw/HermesEnabler
@@ -39,3 +39,4 @@ tags: [ai-trend, repo]
 | 2026-11-23 | – | 10위 (+461) | – | 2,408 |
 | 2026-11-24 | – | 10위 (+390) | – | 2,463 |
 | 2026-11-25 | – | 10위 (+328) | – | 2,496 |
+| 2026-11-26 | – | 11위 (+318) | – | 2,524 |
