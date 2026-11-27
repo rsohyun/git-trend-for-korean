@@ -2,13 +2,13 @@
 repo: n8n-io/nod
 url: https://github.com/n8n-io/nod
 language: TypeScript
-stars: 3619
+stars: 4053
 summary: "사용자의 컴퓨터에서 직접 실행되며 이메일 확인, 웹 서핑, 일정 관리 등의 반복 업무를 대신 처리해 주는 오픈소스 개인 AI 비서입니다."
 main_category: "AI 에이전트"
 categories: ["AI 에이전트", "생산성", "기기 유틸"]
 first_seen: 2026-11-26
-last_seen: 2026-11-26
-appearances: 1
+last_seen: 2026-11-27
+appearances: 2
 tags: [ai-trend, repo]
 ---
 # n8n-io/nod
@@ -33,3 +33,4 @@ tags: [ai-trend, repo]
 | 날짜 | Today | Week | Month | ★ |
 |---|---|---|---|---|
 | 2026-11-26 | – | 4위 (+1,008) | – | 3,619 |
+| 2026-11-27 | – | 4위 (+1,165) | – | 4,053 |

@@ -2,13 +2,13 @@
 repo: heygen-com/hyperframes
 url: https://github.com/heygen-com/hyperframes
 language: TypeScript
-stars: 90272
+stars: 90981
 summary: "HTML과 CSS로 작성한 콘텐츠와 애니메이션을 고화질 MP4 동영상으로 변환해 주는 오픈소스 프레임워크입니다."
 main_category: "개발자 도구"
 categories: ["개발자 도구", "AI 에이전트", "기기 유틸"]
 first_seen: 2026-11-05
-last_seen: 2026-11-26
-appearances: 22
+last_seen: 2026-11-27
+appearances: 23
 tags: [ai-trend, repo]
 ---
 # heygen-com/hyperframes
@@ -52,3 +52,4 @@ HTML, CSS, 미디어 파일을 입력받아 오차 없는 고정밀 MP4 동영�
 | 2026-11-24 | – | – | 15위 (+18,679) | 89,115 |
 | 2026-11-25 | – | – | 16위 (+18,583) | 89,704 |
 | 2026-11-26 | – | – | 16위 (+18,511) | 90,272 |
+| 2026-11-27 | – | – | 16위 (+18,292) | 90,981 |

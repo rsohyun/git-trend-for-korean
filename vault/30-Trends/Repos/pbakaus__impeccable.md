@@ -2,13 +2,13 @@
 repo: pbakaus/impeccable
 url: https://github.com/pbakaus/impeccable
 language: Rust
-stars: 117008
+stars: 117625
 summary: "Impeccable은 코딩 에이전트용 디자인 어휘 체계로, 디자인을 조정·검토하고 AI가 만든 UI의 품질 문제를 사전에 탐지합니다."
 main_category: "개발자 도구"
 categories: ["개발자 도구", "AI 에이전트", "디자인 툴"]
 first_seen: 2026-11-04
-last_seen: 2026-11-26
-appearances: 23
+last_seen: 2026-11-27
+appearances: 24
 tags: [ai-trend, repo]
 ---
 # pbakaus/impeccable
@@ -57,3 +57,4 @@ Impeccable은 코딩 에이전트가 UI 코드를 생성·수정할 때 사용�
 | 2026-11-24 | – | – | 11위 (+30,675) | 115,801 |
 | 2026-11-25 | – | – | 12위 (+30,688) | 116,405 |
 | 2026-11-26 | – | – | 12위 (+30,151) | 117,008 |
+| 2026-11-27 | – | – | 12위 (+29,366) | 117,625 |

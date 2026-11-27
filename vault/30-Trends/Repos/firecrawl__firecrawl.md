@@ -2,13 +2,13 @@
 repo: firecrawl/firecrawl
 url: https://github.com/firecrawl/firecrawl
 language: TypeScript
-stars: 210212
+stars: 211096
 summary: "웹사이트를 AI가 읽기 쉬운 마크다운이나 구조화된 데이터로 바꿔 주고, AI 에이전트와 연동할 수 있게 해 주는 지식 인프라 도구입니다."
 main_category: "AI 에이전트"
 categories: ["AI 에이전트", "개발자 도구", "웹 크롤러"]
 first_seen: 2026-11-20
-last_seen: 2026-11-26
-appearances: 7
+last_seen: 2026-11-27
+appearances: 8
 tags: [ai-trend, repo]
 ---
 # firecrawl/firecrawl
@@ -39,3 +39,4 @@ tags: [ai-trend, repo]
 | 2026-11-24 | 6위 (+924) | – | – | 208,166 |
 | 2026-11-25 | 6위 (+991) | – | – | 209,125 |
 | 2026-11-26 | 6위 (+1,135) | – | – | 210,212 |
+| 2026-11-27 | 6위 (+1,046) | – | – | 211,096 |

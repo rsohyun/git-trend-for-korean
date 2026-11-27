@@ -2,13 +2,13 @@
 repo: Nutlope/hallmark
 url: https://github.com/Nutlope/hallmark
 language: CSS
-stars: 61195
+stars: 61729
 summary: "Hallmark는 Claude Code, Codex, Cursor 등 AI 코딩 에이전트용 디자인 스킬로, AI가 만든 흔적을 제거하고 깔끔한 웹 페이지를 자동 생성합니다."
 main_category: "AI 에이전트"
 categories: ["AI 에이전트", "디자인 자동화", "개발자 도구"]
 first_seen: 2026-11-04
-last_seen: 2026-11-26
-appearances: 23
+last_seen: 2026-11-27
+appearances: 24
 tags: [ai-trend, repo]
 ---
 # Nutlope/hallmark
@@ -56,3 +56,4 @@ Hallmark는 AI 코딩 에이전트가 웹 페이지를 디자인할 때 AI 특�
 | 2026-11-24 | – | – | 1위 (+29,144) | 60,216 |
 | 2026-11-25 | – | – | 1위 (+29,170) | 60,679 |
 | 2026-11-26 | – | – | 1위 (+28,295) | 61,195 |
+| 2026-11-27 | – | – | 1위 (+26,738) | 61,729 |

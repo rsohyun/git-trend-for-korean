@@ -2,13 +2,13 @@
 repo: backnotprop/plannotator
 url: https://github.com/backnotprop/plannotator
 language: TypeScript
-stars: 15115
+stars: 15291
 summary: "AI 코딩 에이전트가 만든 계획, 문서, 코드 변경 사항을 브라우저에서 직접 검토하고 피드백을 보낼 수 있는 로컬 리뷰 도구입니다."
 main_category: "AI 에이전트"
 categories: ["AI 에이전트", "개발자 도구", "코드 리뷰"]
 first_seen: 2026-11-14
-last_seen: 2026-11-26
-appearances: 13
+last_seen: 2026-11-27
+appearances: 14
 tags: [ai-trend, repo]
 ---
 # backnotprop/plannotator
@@ -44,3 +44,4 @@ tags: [ai-trend, repo]
 | 2026-11-24 | – | 1위 (+2,395) | 8위 (+5,093) | 14,738 |
 | 2026-11-25 | – | 1위 (+1,956) | 8위 (+5,292) | 14,934 |
 | 2026-11-26 | – | 1위 (+1,764) | 8위 (+5,475) | 15,115 |
+| 2026-11-27 | – | 1위 (+1,631) | 8위 (+5,601) | 15,291 |

@@ -2,13 +2,13 @@
 repo: tradermonty/claude-trading-skills
 url: https://github.com/tradermonty/claude-trading-skills
 language: Python
-stars: 8480
+stars: 8625
 summary: "시간이 부족한 개인 투자자가 AI를 활용해 시장 분석, 위험 관리, 매매 일지 작성 등 투자 의사결정 과정을 체계적으로 관리할 수 있게 해 주는 도구 모음입니다."
 main_category: "개발자 도구"
 categories: ["개발자 도구", "금융", "AI 에이전트"]
 first_seen: 2026-11-14
-last_seen: 2026-11-26
-appearances: 13
+last_seen: 2026-11-27
+appearances: 14
 tags: [ai-trend, repo]
 ---
 # tradermonty/claude-trading-skills
@@ -45,3 +45,4 @@ tags: [ai-trend, repo]
 | 2026-11-24 | – | 7위 (+1,903) | – | 8,150 |
 | 2026-11-25 | – | 7위 (+1,504) | – | 8,331 |
 | 2026-11-26 | – | 8위 (+1,422) | – | 8,480 |
+| 2026-11-27 | – | 8위 (+1,381) | – | 8,625 |

@@ -2,13 +2,13 @@
 repo: AgriciDaniel/claude-seo
 url: https://github.com/AgriciDaniel/claude-seo
 language: Python
-stars: 32460
+stars: 32696
 summary: "클로드 코드(Claude Code)에서 웹사이트의 검색엔진 최적화(SEO) 상태를 진단하고 개선 계획을 세워 주는 오픈소스 플러그인입니다."
 main_category: "개발자 도구"
 categories: ["개발자 도구", "AI 에이전트"]
 first_seen: 2026-11-04
-last_seen: 2026-11-26
-appearances: 17
+last_seen: 2026-11-27
+appearances: 18
 tags: [ai-trend, repo]
 ---
 # AgriciDaniel/claude-seo
@@ -48,3 +48,4 @@ tags: [ai-trend, repo]
 | 2026-11-24 | – | – | 13위 (+12,148) | 31,994 |
 | 2026-11-25 | – | – | 14위 (+12,213) | 32,229 |
 | 2026-11-26 | – | – | 14위 (+12,180) | 32,460 |
+| 2026-11-27 | – | – | 14위 (+10,958) | 32,696 |
