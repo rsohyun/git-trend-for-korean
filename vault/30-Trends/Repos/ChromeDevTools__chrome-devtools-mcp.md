@@ -2,13 +2,13 @@
 repo: ChromeDevTools/chrome-devtools-mcp
 url: https://github.com/ChromeDevTools/chrome-devtools-mcp
 language: TypeScript
-stars: 59528
+stars: 59643
 summary: "AI 코딩 에이전트가 크롬 브라우저를 직접 조작하고 검사할 수 있게 해 주는 도구입니다."
 main_category: "AI 에이전트"
 categories: ["AI 에이전트", "개발자 도구", "웹 자동화"]
 first_seen: 2026-11-14
-last_seen: 2026-11-27
-appearances: 14
+last_seen: 2026-11-28
+appearances: 15
 tags: [ai-trend, repo]
 ---
 # ChromeDevTools/chrome-devtools-mcp
@@ -44,3 +44,4 @@ tags: [ai-trend, repo]
 | 2026-11-25 | – | 6위 (+1,258) | – | 59,245 |
 | 2026-11-26 | – | 7위 (+1,203) | – | 59,387 |
 | 2026-11-27 | – | 7위 (+1,175) | – | 59,528 |
+| 2026-11-28 | – | 7위 (+1,150) | – | 59,643 |

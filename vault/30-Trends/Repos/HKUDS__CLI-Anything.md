@@ -2,13 +2,13 @@
 repo: HKUDS/CLI-Anything
 url: https://github.com/HKUDS/CLI-Anything
 language: Python
-stars: 66498
+stars: 67084
 summary: "다양한 소프트웨어를 AI 에이전트가 명령줄 인터페이스(CLI)를 통해 직접 다룰 수 있도록 변환해 주는 도구입니다."
 main_category: "AI 에이전트"
 categories: ["AI 에이전트", "개발자 도구", "유틸리티"]
 first_seen: 2026-11-19
-last_seen: 2026-11-27
-appearances: 9
+last_seen: 2026-11-28
+appearances: 10
 tags: [ai-trend, repo]
 ---
 # HKUDS/CLI-Anything
@@ -39,3 +39,4 @@ AI 에이전트와 기존 소프트웨어 사이의 간극을 좁혀 주는 프�
 | 2026-11-25 | 3위 (+1,074) | – | – | 65,017 |
 | 2026-11-26 | 3위 (+1,106) | – | – | 65,816 |
 | 2026-11-27 | 3위 (+746) | – | – | 66,498 |
+| 2026-11-28 | 3위 (+666) | – | – | 67,084 |

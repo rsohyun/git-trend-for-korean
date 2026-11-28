@@ -2,13 +2,13 @@
 repo: obsidianmd/obsidian-skills
 url: https://github.com/obsidianmd/obsidian-skills
 language: Shell
-stars: 54081
+stars: 54386
 summary: "AI 에이전트가 옵시디언(Obsidian) 노트를 읽고 수정하며, 마크다운과 캔버스 파일을 직접 다룰 수 있게 해 주는 도구 모음입니다."
 main_category: "AI 에이전트"
 categories: ["AI 에이전트", "노트 작성", "개발자 도구"]
 first_seen: 2026-11-27
-last_seen: 2026-11-27
-appearances: 1
+last_seen: 2026-11-28
+appearances: 2
 tags: [ai-trend, repo]
 ---
 # obsidianmd/obsidian-skills
@@ -33,3 +33,4 @@ AI 에이전트가 옵시디언 문서와 파일 형식을 이해하지 못해 �
 | 날짜 | Today | Week | Month | ★ |
 |---|---|---|---|---|
 | 2026-11-27 | – | 13위 (+704) | – | 54,081 |
+| 2026-11-28 | – | 13위 (+950) | – | 54,386 |

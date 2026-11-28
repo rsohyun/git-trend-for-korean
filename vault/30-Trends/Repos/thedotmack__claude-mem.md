@@ -2,13 +2,13 @@
 repo: thedotmack/claude-mem
 url: https://github.com/thedotmack/claude-mem
 language: TypeScript
-stars: 120035
+stars: 120243
 summary: "Claude-Mem은 AI 에이전트가 세션을 종료해도 작업 기록을 자동으로 저장·압축·재활용해 지속적인 컨텍스트를 제공하는 도구입니다."
 main_category: "AI 에이전트"
 categories: ["AI 에이전트", "개발자 도구", "클라우드 서비스"]
 first_seen: 2026-11-04
-last_seen: 2026-11-27
-appearances: 24
+last_seen: 2026-11-28
+appearances: 25
 tags: [ai-trend, repo]
 ---
 # thedotmack/claude-mem
@@ -59,3 +59,4 @@ Claude-Mem은 에이전트가 수행한 도구 사용 기록을 실시간으로 
 | 2026-11-25 | – | – | 6위 (+17,462) | 119,596 |
 | 2026-11-26 | – | – | 6위 (+17,424) | 119,811 |
 | 2026-11-27 | – | – | 6위 (+17,325) | 120,035 |
+| 2026-11-28 | – | – | 6위 (+17,228) | 120,243 |

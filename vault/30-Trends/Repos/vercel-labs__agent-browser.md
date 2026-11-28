@@ -2,13 +2,13 @@
 repo: vercel-labs/agent-browser
 url: https://github.com/vercel-labs/agent-browser
 language: Rust
-stars: 54191
+stars: 54360
 summary: "AI 에이전트가 셸 명령어로 웹 브라우저를 조작하여 페이지를 읽고 행동할 수 있게 해 주는 브라우저 자동화 도구입니다."
 main_category: "AI 에이전트"
 categories: ["AI 에이전트", "개발자 도구", "웹 자동화"]
 first_seen: 2026-11-06
-last_seen: 2026-11-27
-appearances: 21
+last_seen: 2026-11-28
+appearances: 22
 tags: [ai-trend, repo]
 ---
 # vercel-labs/agent-browser
@@ -51,3 +51,4 @@ tags: [ai-trend, repo]
 | 2026-11-25 | – | – | 19위 (+9,395) | 53,839 |
 | 2026-11-26 | – | – | 19위 (+9,541) | 54,010 |
 | 2026-11-27 | – | – | 19위 (+9,648) | 54,191 |
+| 2026-11-28 | – | – | 19위 (+9,765) | 54,360 |

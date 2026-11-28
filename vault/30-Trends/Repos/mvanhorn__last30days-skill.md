@@ -2,13 +2,13 @@
 repo: mvanhorn/last30days-skill
 url: https://github.com/mvanhorn/last30days-skill
 language: Python
-stars: 75892
+stars: 76436
 summary: "AI 에이전트를 이용해 레딧, 엑스(X), 유튜브, 해커뉴스 등 여러 플랫폼의 최신 정보를 동시에 검색하고 요약해 주는 검색 도구입니다."
 main_category: "AI 에이전트"
 categories: ["AI 에이전트", "개발자 도구", "정보 검색"]
 first_seen: 2026-11-17
-last_seen: 2026-11-27
-appearances: 11
+last_seen: 2026-11-28
+appearances: 12
 tags: [ai-trend, repo]
 ---
 # mvanhorn/last30days-skill
@@ -41,3 +41,4 @@ tags: [ai-trend, repo]
 | 2026-11-25 | 10위 (+703) | 5위 (+5,369) | – | 74,423 |
 | 2026-11-26 | 10위 (+945) | 6위 (+5,302) | – | 75,236 |
 | 2026-11-27 | 10위 (+759) | 6위 (+5,090) | – | 75,892 |
+| 2026-11-28 | 10위 (+675) | 6위 (+5,072) | – | 76,436 |

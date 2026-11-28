@@ -2,13 +2,13 @@
 repo: kajisho5/ffmpeg-skill
 url: https://github.com/kajisho5/ffmpeg-skill
 language: Python
-stars: 11599
+stars: 11974
 summary: "AI 코딩 에이전트가 로컬에서 안전하게 동영상을 편집하고 검증할 수 있게 해 주는 42가지 FFmpeg 도구 모음입니다."
 main_category: "AI 에이전트"
 categories: ["AI 에이전트", "개발자 도구", "멀티미디어"]
 first_seen: 2026-11-17
-last_seen: 2026-11-27
-appearances: 9
+last_seen: 2026-11-28
+appearances: 10
 tags: [ai-trend, repo]
 ---
 # kajisho5/ffmpeg-skill
@@ -41,3 +41,4 @@ tags: [ai-trend, repo]
 | 2026-11-25 | – | 13위 (+2,993) | 18위 (+8,190) | 10,776 |
 | 2026-11-26 | – | 14위 (+3,048) | 18위 (+8,284) | 11,186 |
 | 2026-11-27 | – | 15위 (+3,229) | 18위 (+8,408) | 11,599 |
+| 2026-11-28 | – | 15위 (+3,169) | 18위 (+8,708) | 11,974 |

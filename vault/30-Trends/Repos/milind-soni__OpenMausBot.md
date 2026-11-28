@@ -2,13 +2,13 @@
 repo: milind-soni/OpenMausBot
 url: https://github.com/milind-soni/OpenMausBot
 language: TypeScript
-stars: 28227
+stars: 28608
 summary: "채팅 앱 형태로 여러 인공지능 봇과 대화하며 작업을 맡길 수 있는 오픈소스 프로그램입니다."
 main_category: "AI 에이전트"
 categories: ["AI 에이전트", "개발자 도구", "기기 유틸"]
 first_seen: 2026-11-06
-last_seen: 2026-11-27
-appearances: 20
+last_seen: 2026-11-28
+appearances: 21
 tags: [ai-trend, repo]
 ---
 # milind-soni/OpenMausBot
@@ -50,3 +50,4 @@ tags: [ai-trend, repo]
 | 2026-11-25 | – | – | 3위 (+22,073) | 27,600 |
 | 2026-11-26 | – | – | 3위 (+22,391) | 27,895 |
 | 2026-11-27 | – | – | 3위 (+22,590) | 28,227 |
+| 2026-11-28 | – | – | 3위 (+22,900) | 28,608 |
